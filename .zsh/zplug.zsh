@@ -2,7 +2,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 
-zplug "~/.zsh", from:local, use:"plugins/**/*.zsh"
+zplug "~/.zsh", from:local, use:"*_*.zsh"
 
 zplug "junegunn/fzf-bin", \
     from:gh-r, \
