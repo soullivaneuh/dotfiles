@@ -1,0 +1,52 @@
+[user]
+	name = Sullivan SENECHAL
+	email = soullivaneuh@gmail.com
+	signingkey = 88CB7D07
+
+[alias]
+	amend = commit --amend
+	f = fetch --all --prune --tags --prune-tags
+	st = status
+	s = status
+	df = diff
+	dfc = diff --cached
+	d = diff
+	dc = diff --cached
+	co = checkout
+	ci = commit
+	br = branch
+	who = shortlog -sne
+	oneline = log --pretty=oneline --abbrev-commit --decorate --graph
+	changes = diff --name-status
+	dic = diff --cached
+	diffstat = diff --stat
+	lc = !git oneline ORIG_HEAD.. --stat --no-merges
+	addm = !git-ls-files -m -z | xargs -0 git-add && git status
+	addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status
+	rmm = !git ls-files -d -z | xargs -0 git-rm && git status
+	undo = !git reset --soft HEAD^
+	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
+
+[color]
+	ui = true
+
+[fetch]
+	prune = true
+
+[commit]
+	gpgsign = true
+
+[push]
+	default = simple
+
+[credential]
+	helper = cache --timeout=3600
+
+[core]
+	editor = vim
+	excludesfile = /home/sullivan/.gitignore_global
+
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
