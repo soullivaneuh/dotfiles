@@ -5,6 +5,8 @@ zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 zplug "~/.zsh", from:local, use:"*_*.zsh"
 
 zplug "b4b4r07/emoji-cli"
+zplug "docker/compose", as:command, from:gh-r, rename-to:docker-compose, \
+  use:"*docker-compose-$(uname -s)-$(uname -m)"
 zplug "GoogleContainerTools/skaffold", as:command, from:gh-r, rename-to:skaffold
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
 zplug "junegunn/fzf", use:"shell/*.zsh", defer:2
