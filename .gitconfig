@@ -47,6 +47,6 @@
 	excludesfile = /home/sullivan/.gitignore_global
 
 [pager]
-	log = diff-highlight | less
+	log = diff-highlight | emojify | less
 	show = diff-highlight | less
 	diff = diff-highlight | less
