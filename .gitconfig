@@ -26,6 +26,7 @@
 	rmm = !git ls-files -d -z | xargs -0 git-rm && git status
 	undo = !git reset --soft HEAD^
 	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
+	hack = !git amend --all --no-edit && git push --force
 
 [color]
 	ui = true
