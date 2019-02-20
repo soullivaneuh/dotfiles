@@ -1,5 +1,5 @@
 # @see https://unix.stackexchange.com/a/501164/173927
-_palette() {
+palette() {
     echo "PALETTE OF 8 COLORS (bold, high intensity, normal, faint)"
     for i in {30..37}; do printf "\e[1;${i}m1;%-2s      \e[m" "$i"; done; echo
     for i in {90..97}; do printf "\e[${i}m%+4s      \e[m" "$i"; done; echo
@@ -17,4 +17,3 @@ _palette() {
         [[ $(( $(( $i - 15 )) % $(( $j * 6 )) )) = 0 ]] && echo
     done
 }
-alias palette='_palette'
