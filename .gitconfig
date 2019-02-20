@@ -27,6 +27,9 @@
 	undo = !git reset --soft HEAD^
 	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
 	hack = !git amend --all --no-edit && git push --force
+	# https://github.com/caarlos0/git-add-remote
+	add-upstream = !zsh -ic \"add-upstream $*\"
+	add-remote = !zsh -ic \"add-remote $*\"
 
 [color]
 	ui = true
