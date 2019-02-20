@@ -5,7 +5,9 @@ fi
 export ZPLUG_LOADFILE=~/.zsh/zplug.zsh
 source ~/.zplug/init.zsh
 
+LOAD_FLAGS=""
 if ! zplug check --verbose; then
+    LOAD_FLAGS="--verbose"
     zplug install
 fi
 
@@ -13,4 +15,4 @@ if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local
 fi
 
-zplug load --verbose
+zplug load ${LOAD_FLAGS}
