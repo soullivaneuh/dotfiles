@@ -1,3 +1,12 @@
+TMP_PATH=/tmp/${USER}/zsh/
+UPDATE_LOCK=${TMP_PATH}/update.lock
+mkdir --parent ${TMP_PATH}
+if [[ ! -f ${UPDATE_LOCK} ]]; then
+  touch ${UPDATE_LOCK}
+  echo "Update: Dotfiles"
+  cd ~/dotfiles && make update deploy && cd -
+fi
+
 if [[ ! -a ~/.zplug ]]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
