@@ -2,7 +2,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 
-zplug "~/.zsh", from:local, use:"*_*.zsh"
+zplug "~/.zsh", from:local, use:"*_*.zsh", defer:3
 
 zplug "b4b4r07/emoji-cli"
 zplug "docker/compose", as:command, from:gh-r, rename-to:docker-compose, \
@@ -10,6 +10,7 @@ zplug "docker/compose", as:command, from:gh-r, rename-to:docker-compose, \
 zplug "GoogleContainerTools/skaffold", as:command, from:gh-r, rename-to:skaffold
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
 zplug "junegunn/fzf", use:"shell/*.zsh", defer:2
+zplug "kubernetes/kompose", from:gh-r, as:command
 zplug "motemen/ghq", as:command, from:gh-r, rename-to:ghq
 zplug "motemen/ghq", use:"zsh"
 zplug "mrowa44/emojify", as:command
