@@ -1,0 +1,9 @@
+{
+  "registry-mirrors": [
+    "https://registry-mirror.nexylan.net"
+  ],
+  "insecure-registries": [
+    "registry.int.nexylan.net"
+  ],
+  "userland-proxy": false
+}

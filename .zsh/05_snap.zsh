@@ -22,6 +22,7 @@ snap_alias()
 # Docker & Kubernetes
 snap_install microk8s --classic
 snap_alias microk8s.kubectl kubectl
+snap_alias microk8s.docker docker
 snap_install helm --classic
 
 # IDE
