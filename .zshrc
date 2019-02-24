@@ -1,4 +1,4 @@
-TMP_PATH=/tmp/${USER}/zsh/
+TMP_PATH=/tmp/${USER}/zsh
 UPDATE_LOCK=${TMP_PATH}/update.lock
 mkdir --parent ${TMP_PATH}
 if [[ ! -f ${UPDATE_LOCK} ]]; then
