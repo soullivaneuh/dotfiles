@@ -21,7 +21,8 @@ init: ## Setup environment settings
 	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/init.sh
 
 update: ## Fetch changes for this repo
-	git pull origin master
+	git diff --exit-code
+	git pull --rebase origin master
 	git submodule init
 	git submodule update
 	git submodule foreach git pull origin master
