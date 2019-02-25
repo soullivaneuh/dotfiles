@@ -26,6 +26,6 @@ helm repo update
 # @see https://github.com/ubuntu/microk8s/issues/173#issuecomment-466792021
 # @see https://github.com/ubuntu/microk8s#configuring-microk8s-services
 DOCKERD_SNAP_ARGS=/var/snap/microk8s/current/args/dockerd
-DOCKERD_ARGS="--config-file=${HOME}/.docker/daemon.json --userns-remap=$(whoami)"
+DOCKERD_ARGS="--config-file=${HOME}/.docker/daemon.json"
 grep --quiet --line-regexp --fixed-strings -- ${DOCKERD_ARGS} ${DOCKERD_SNAP_ARGS} \
   || (echo ${DOCKERD_ARGS} | sudo tee --append ${DOCKERD_SNAP_ARGS} && sudo systemctl restart snap.microk8s.daemon-docker.service)
