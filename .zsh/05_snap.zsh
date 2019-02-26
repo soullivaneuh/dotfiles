@@ -1,6 +1,9 @@
 SNAP_LOCK=${TMP_PATH}/snap.lock
 ! [[ -f "${SNAP_LOCK}" ]] && touch ${SNAP_LOCK} || return 0
-[[ -x "$(command -v snap)" ]] || (echo "Missing snap command" && return 1)
+if ! [[ -x "$(command -v snap)" ]];then
+  echo "Missing snap command"
+  return 1
+fi
 
 snap_install()
 {
@@ -8,7 +11,7 @@ snap_install()
   shift
   local OPTIONS=${@}
 
-  snap list ${PACKAGE} >> /dev/null 2>&1 || sudo snap install ${PACKAGE} ${OPTIONS}
+  snap list ${PACKAGE} >> /dev/null 2>&1 || sudo snap install ${PACKAGE} "$@"
 }
 
 snap_alias()
@@ -20,9 +23,8 @@ snap_alias()
 }
 
 # Docker & Kubernetes
-snap_install microk8s --classic
+snap_install microk8s --classic --channel=1.13/edge/secure-containerd
 snap_alias microk8s.kubectl kubectl
-snap_alias microk8s.docker docker
 snap_install helm --classic
 
 # IDE
