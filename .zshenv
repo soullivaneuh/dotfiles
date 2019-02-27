@@ -2,6 +2,8 @@ HYPHEN_INSENSITIVE="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
+export PATH="${HOME}/.gem/bin:${PATH}"
+
 export EDITOR=vi
 export VISUAL=view
 
