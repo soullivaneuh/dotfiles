@@ -22,6 +22,11 @@ snap_alias()
   which ${ALIAS} >> /dev/null 2>&1 || sudo snap alias ${APP} ${ALIAS}
 }
 
+# Languages
+snap_install ruby --classic
+snap_install go --classic
+snap_install node --classic
+
 # Docker & Kubernetes
 snap_install microk8s --classic --channel=1.13/edge/secure-containerd
 snap_alias microk8s.kubectl kubectl
