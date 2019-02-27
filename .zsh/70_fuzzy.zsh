@@ -1,6 +1,10 @@
 # ALT-C - Fuzzy commands
 fzf-project-widget() {
-  local cmd="(find -L . -mindepth 1 ; ghq list) 2> /dev/null"
+  local cmd="(
+    find -L . -mindepth 1
+    ;
+    ghq list
+  ) 2> /dev/null"
   setopt localoptions pipefail 2> /dev/null
   local line="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
 
@@ -16,6 +20,8 @@ fzf-project-widget() {
     cd ${line}
   elif [[ -x "${line}" ]]; then
     ${line}
+  elif [[ -f "${line}" ]]; then
+    ${EDITOR} ${line}
   else
     echo "Nothing to do for ${line}" && false
   fi

@@ -2,6 +2,9 @@ HYPHEN_INSENSITIVE="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
+export EDITOR=vi
+export VISUAL=view
+
 export EMOJI_CLI_KEYBIND="^e"
 
 export LESS="-R --no-init --quit-if-one-screen"
