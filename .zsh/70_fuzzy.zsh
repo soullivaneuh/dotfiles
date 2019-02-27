@@ -8,6 +8,8 @@ fzf-project-widget() {
     ghq list
     ;
     find ${find_opts} ~ ${find_predicates} -and -not -path '$(pwd)/*'
+    ;
+    find ${find_opts} /etc ${find_predicates}
   ) 2> /dev/null"
   setopt localoptions pipefail 2> /dev/null
   local line="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
