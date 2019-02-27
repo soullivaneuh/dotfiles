@@ -1,9 +1,13 @@
 # ALT-C - Fuzzy commands
 fzf-project-widget() {
+  local find_opts="-L"
+  local find_predicates="-mindepth 1"
   local cmd="(
-    find -L . -mindepth 1
+    find ${find_opts} . ${find_predicates}
     ;
     ghq list
+    ;
+    find ${find_opts} ~ ${find_predicates} -and -not -path '$(pwd)/*'
   ) 2> /dev/null"
   setopt localoptions pipefail 2> /dev/null
   local line="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
