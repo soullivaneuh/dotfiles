@@ -41,9 +41,9 @@ snap_install rubymine --classic
 snap_install webstorm --classic
 
 # Tools
-sudo snap install google-cloud-sdk --classic
-sudo snap install hub --classic
-sudo snap install travis
+snap_install google-cloud-sdk --classic
+snap_install hub --classic
+snap_install travis
 
 # Communication
 snap_install discord
