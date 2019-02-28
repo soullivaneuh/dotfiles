@@ -32,3 +32,11 @@ fi
 zplug load ${LOAD_FLAGS}
 
 eval "$(tmuxifier init -)"
+
+# Check binaries that need system wide installation (apt-get, pacman...).
+for cmd in \
+  tmux \
+  terminator
+do
+  [[ -x "$(command -v ${cmd})" ]] || echo "Missing command: ${cmd}"
+done
