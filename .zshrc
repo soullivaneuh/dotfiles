@@ -35,6 +35,7 @@ eval "$(tmuxifier init -)"
 
 # Check binaries that need system wide installation (apt-get, pacman...).
 for cmd in \
+  asciinema \
   terminator \
   tmux
 do
