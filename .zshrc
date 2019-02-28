@@ -35,8 +35,8 @@ eval "$(tmuxifier init -)"
 
 # Check binaries that need system wide installation (apt-get, pacman...).
 for cmd in \
-  tmux \
-  terminator
+  terminator \
+  tmux
 do
   [[ -x "$(command -v ${cmd})" ]] || echo "Missing command: ${cmd}"
 done
