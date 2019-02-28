@@ -11,6 +11,11 @@ if [[ ! -a ~/.zplug ]]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
+if [[ ! -a ~/.tmux/plugins/tpm ]]; then
+  mkdir --parent ~/.tmux/plugins
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
 export ZPLUG_LOADFILE=~/.zsh/zplug.zsh
 source ~/.zplug/init.zsh
 
@@ -25,3 +30,5 @@ if [[ -f ~/.zshrc.local ]]; then
 fi
 
 zplug load ${LOAD_FLAGS}
+
+eval "$(tmuxifier init -)"

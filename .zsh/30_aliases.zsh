@@ -1,6 +1,7 @@
 # Just typing the file path without command will open them with vim
 alias -s {php,yml,yaml}=vim
 
+alias mux="tmuxifier"
 alias p="pwd"
 alias zshreload="source $HOME/.zshrc"
 

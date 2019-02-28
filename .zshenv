@@ -20,6 +20,8 @@ export LESS_TERMCAP_me=$'\e[m'
 export LESS_TERMCAP_ue=$'\e[m'
 export LESS_TERMCAP_se=$'\e[m'
 
+export TMUXIFIER_LAYOUT_PATH="${HOME}/.tmuxifier/layouts"
+
 export ZPLUG_THREADS=64
 
 setopt HIST_IGNORE_ALL_DUPS
