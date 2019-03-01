@@ -4,7 +4,7 @@ fzf-project-widget() {
   local find_predicates="-mindepth 1"
   # @see http://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before/
   local cmd="(
-    bfs ${find_opts} . ${find_predicates} -nohidden
+    bfs ${find_opts} . ${find_predicates}
     ;
     ghq list
     ;
