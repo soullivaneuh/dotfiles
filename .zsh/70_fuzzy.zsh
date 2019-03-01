@@ -3,7 +3,7 @@ fzf-project-widget() {
   local find_opts="-L"
   local find_predicates="-mindepth 1"
   local cmd="(
-    find ${find_opts} . ${find_predicates}
+    rg --files .
     ;
     ghq list
     ;

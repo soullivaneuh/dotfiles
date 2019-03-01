@@ -43,6 +43,7 @@ snap_install webstorm --classic
 # Tools
 snap_install google-cloud-sdk --classic
 snap_install hub --classic
+snap_install ripgrep --classic
 snap_install travis
 
 # Communication
