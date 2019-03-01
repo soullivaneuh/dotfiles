@@ -2,14 +2,15 @@
 fzf-project-widget() {
   local find_opts="-L"
   local find_predicates="-mindepth 1"
+  # @see http://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before/
   local cmd="(
-    rg --files .
+    bfs ${find_opts} . ${find_predicates} -nohidden
     ;
     ghq list
     ;
-    find ${find_opts} ~ ${find_predicates} -and -not -path '$(pwd)/*'
+    bfs ${find_opts} ~ ${find_predicates} -and -not -path '$(pwd)/*'
     ;
-    find ${find_opts} /etc ${find_predicates}
+    bfs ${find_opts} /etc ${find_predicates}
   ) 2> /dev/null"
   setopt localoptions pipefail 2> /dev/null
   local line="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
