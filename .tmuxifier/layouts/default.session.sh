@@ -7,7 +7,7 @@
 if initialize_session "default"; then
   load_window "monitor"
   load_window "default"
-  select_window 0
+  select_window 1
 fi
 
 # Finalize session creation and switch/attach to it.

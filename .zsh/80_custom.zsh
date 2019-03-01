@@ -17,3 +17,7 @@ palette() {
     [[ $(( $(( $i - 15 )) % $(( $j * 6 )) )) = 0 ]] && echo
   done
 }
+
+repositories() {
+  https api.github.com/user/repos per_page==100 -a soullivaneuh:${GITHUB_TOKEN} | jq -rc '.[] | .full_name'
+}
