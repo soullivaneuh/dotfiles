@@ -25,3 +25,5 @@ export TMUXIFIER_LAYOUT_PATH="${HOME}/.tmuxifier/layouts"
 export ZPLUG_THREADS=64
 
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
