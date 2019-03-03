@@ -23,8 +23,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Splits
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+Shift+h split h
+bindsym $mod+Shift+v split v
 
 # Layouts
 bindsym $mod+f fullscreen toggle
