@@ -1,5 +1,6 @@
 /.config/*
 !/.config/.gitkeep
+!/.config/i3/
 !/.config/terminator/
 /.vim/.netrwhist
 /.vim/autoload/plug.vim
