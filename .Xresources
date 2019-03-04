@@ -1,0 +1,4 @@
+#include ".gruvbox-contrib/urxvt256/gruvbox-urxvt256.xresources"
+#include ".gruvbox-contrib/xresources/gruvbox-dark.xresources"
+
+URxvt.font: xft:Monospace:size=9

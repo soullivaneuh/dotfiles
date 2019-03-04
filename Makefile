@@ -16,6 +16,8 @@ deploy: ## Create symlink to home directory
 	@echo '==> Start to deploy dotfiles to home directory.'
 	@echo ''
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
+	cat `grep '#include' .Xresources | cut -d' ' -f2 | tr -d '"'` > $(HOME)/.Xdefaults
+	grep -v '#include' .Xresources >> $(HOME)/.Xdefaults
 
 init: ## Setup environment settings
 	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/init.sh
