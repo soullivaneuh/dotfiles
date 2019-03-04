@@ -1,6 +1,6 @@
 [global_config]
   title_font = Monospace 9
-  window_state = fullscreen
+  window_state = maximise
 [keybindings]
 [layouts]
   [[default]]
