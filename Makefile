@@ -24,7 +24,7 @@ init: ## Setup environment settings
 
 update: ## Fetch changes for this repo
 	git diff --exit-code
-	git pull --rebase origin master
+	git pull --rebase
 	git submodule init
 	git submodule update
 	git submodule foreach git pull origin master
