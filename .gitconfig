@@ -1,7 +1,7 @@
 [user]
 	name = Sullivan SENECHAL
 	email = soullivaneuh@gmail.com
-	signingkey = 88CB7D07
+	signingkey = 8CC12B21
 
 [alias]
 	amend = commit --amend
