@@ -11,6 +11,7 @@ bindsym $mod+l exec i3lock --color 000000
 bindsym $mod+Shift+q kill
 
 # Focus
+focus_follows_mouse no
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
