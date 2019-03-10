@@ -1,17 +1,15 @@
 set encoding=utf-8 " Because nobody wants latin-1
 set backspace=indent,eol,start
-set mouse=a " Enable mouse
+set clipboard=unnamedplus " Bind y yank command to X11 clipboard
+set showcmd
 set relativenumber
 set number " Show line numbers
 set cursorline " Show on what line the cursor is
 set ruler " Show line and column numbers of cursor position
 set autoindent
 set smartindent
-
-" Needs +clipboard and +xterm_clipboard options to work
-" @see https://stackoverflow.com/a/4608206/1731473
-" @see https://www.slothparadise.com/copy-system-clipboard-vim/
-vmap <C-C> "+y
+set hlsearch
+set incsearch
 
 " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -28,6 +26,9 @@ Plug '~/.zplug/repos/junegunn/fzf'
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
+
+Plug 'StanAngeloff/php.vim'
+Plug '2072/PHP-Indenting-for-VIm'
 call plug#end()
 
 " Theme setup
