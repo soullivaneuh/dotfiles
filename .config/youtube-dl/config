@@ -1,0 +1,5 @@
+--all-subs
+--recode-video mkv
+--write-all-thumbnails
+
+-o ~/youtube-dl/%(title)s/%(title)s.%(height)sp.%(vcodec)s.%(ext)s

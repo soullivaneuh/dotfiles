@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+command=$1
+shift
+
+pactl $command $(pactl list short | grep RUNNING | cut -f1) $@

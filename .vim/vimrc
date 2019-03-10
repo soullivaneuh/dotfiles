@@ -22,7 +22,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf.vim'
-Plug '~/.zplug/repos/junegunn/fzf'
+Plug '/usr/bin/fzf'
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'

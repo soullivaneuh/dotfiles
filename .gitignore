@@ -1,7 +1,9 @@
 /.config/*
 !/.config/.gitkeep
 !/.config/i3/
+!/.config/polybar/
 !/.config/terminator/
+!/.config/youtube-dl/
 /.gnupg/*
 !/.gnupg/gpg.conf
 /.vim/.netrwhist

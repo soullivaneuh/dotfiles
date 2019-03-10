@@ -1,0 +1,65 @@
+[settings]
+format-padding = 1
+
+[colors]
+# @see https://github.com/morhetz/gruvbox#dark-mode-1
+darkgray = ${xrdb:color8}
+orange = ${xrdb:color9}
+white = #ebdbb2
+gray = #a89984
+black = #1d2021
+red = #cc241d
+blue = #458588
+yellow = #d79921
+green = #98971a
+background = ${xrdb:background}
+background-alt = #32302f
+foreground = ${xrdb:foreground}
+foreground-alt = #a89984
+primary = #458588
+secondary = #d79921
+alert = #cc241d
+
+[bar/bar]
+bottom = true
+width = 100%
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = "monospace:size=8;2"
+font-1 = "FontAwesome:size=8;2"
+locale = en_US.UTF-8
+
+modules-left = i3
+modules-right = pulseaudio cpu memory network date
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+label = CPU %percentage%%
+
+[module/date]
+type = internal/date
+date = %Y-%m-%d %H:%M
+
+[module/i3]
+type = internal/i3
+
+label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 1
+
+[module/memory]
+type = internal/memory
+interval = 0.5
+label = RAM %percentage_used%%
+
+[module/network]
+type = internal/network
+interval = 0.5
+interface = ${env:DEFAULT_NETWORK_INTERFACE:eth0}
+label-connected = IP %local_ip% %downspeed%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+label-volume = Vol. %percentage%%
+label-muted = Mut. %percentage%%

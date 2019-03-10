@@ -1,0 +1,5 @@
+alias find="bfs"
+alias https="http --default-scheme=https"
+alias mux="tmuxifier"
+alias p="pwd"
+alias vi="vim"
