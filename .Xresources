@@ -2,3 +2,4 @@
 #include ".gruvbox-contrib/xresources/gruvbox-dark.xresources"
 
 URxvt.font: xft:Monospace:size=9
+URxvt.utf-8: 1
