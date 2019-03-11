@@ -29,6 +29,7 @@ sudo xbps-install --yes --automatic \
   docker-compose \
   expect \
   feh \
+  font-firacode \
   firefox \
   font-symbola \
   fzf \
