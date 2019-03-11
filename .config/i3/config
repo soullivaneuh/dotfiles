@@ -1,12 +1,12 @@
 # SUPER entry touch
 set $mod Mod4
 
-font pango:monospace 8
+font pango:monospace bold 9
 floating_modifier $mod
 
 # Quick actions
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
 bindsym $mod+l exec i3lock --color 000000
 bindsym $mod+Shift+q kill
 
@@ -44,7 +44,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Workspaces
-set $ws1 "1 Home"
+set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
@@ -83,13 +83,14 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-msg exit"
 
 # Volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl-sink-auto set-sink-volume +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl-sink-auto set-sink-volume -5%
+bindsym XF86AudioMute exec --no-startup-id pactl-sink-auto set-sink-mute toggle
 
 bar {
-  status_command i3status
+  # Don't show the default i3bar
+  mode invisible
+  status_command polybar bar
 }
 
 # Set the wallpaper

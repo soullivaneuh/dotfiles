@@ -5,14 +5,10 @@ zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 zplug "~/.zsh", from:local, use:"*_*.zsh", defer:3
 
 zplug "b4b4r07/emoji-cli"
-zplug "docker/compose", as:command, from:gh-r, rename-to:docker-compose, \
-  use:"*docker-compose-$(uname -s)-$(uname -m)"
 zplug "GoogleContainerTools/skaffold", as:command, from:gh-r, rename-to:skaffold
 zplug "jimeh/tmuxifier", as:command, use:"bin/*"
-zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
 zplug "junegunn/fzf", use:"shell/*.zsh", defer:2
 zplug "kubernetes/kompose", from:gh-r, as:command
-zplug "motemen/ghq", as:command, from:gh-r, rename-to:ghq
 zplug "motemen/ghq", use:"zsh"
 zplug "mrowa44/emojify", as:command
 zplug "stedolan/jq", as:command, from:gh-r, rename-to:jq

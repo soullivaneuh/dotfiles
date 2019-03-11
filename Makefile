@@ -20,7 +20,7 @@ deploy: ## Create symlink to home directory
 	grep -v '#include' .Xresources >> $(HOME)/.Xdefaults
 
 init: ## Setup environment settings
-	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/init.sh
+	@DOTPATH=$(DOTPATH) sh $(DOTPATH)/init.sh
 
 update: ## Fetch changes for this repo
 	git diff --exit-code

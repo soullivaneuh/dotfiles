@@ -1,10 +1,12 @@
+source ~/.shrc
+
 TMP_PATH=/tmp/${USER}/zsh
 UPDATE_LOCK=${TMP_PATH}/update.lock
 mkdir --parent ${TMP_PATH}
 if [[ ! -f ${UPDATE_LOCK} ]]; then
   touch ${UPDATE_LOCK}
   echo "Update: Dotfiles"
-  cd ~/dotfiles && make update deploy && cd -
+  cd ~/p/github.com/soullivaneuh/dotfiles && make update deploy && cd -
 fi
 
 if [[ ! -a ~/.zplug ]]; then
@@ -25,6 +27,8 @@ if ! zplug check --verbose; then
   zplug install
 fi
 
+source ~/.alias
+
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
@@ -32,14 +36,3 @@ fi
 zplug load ${LOAD_FLAGS}
 
 eval "$(tmuxifier init -)"
-
-# Check binaries that need system wide installation (apt-get, pacman...).
-for cmd in \
-  asciinema \
-  bfs \
-  http \
-  terminator \
-  tmux
-do
-  [[ -x "$(command -v ${cmd})" ]] || echo "Missing command: ${cmd}"
-done
