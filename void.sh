@@ -30,6 +30,7 @@ sudo xbps-install --yes --automatic \
   expect \
   feh \
   firefox \
+  font-symbola \
   fzf \
   gcc \
   git \
@@ -52,6 +53,10 @@ sudo xbps-install --yes --automatic \
   nerd-fonts \
   nodejs \
   openjdk \
+  noto-fonts-cjk \
+  noto-fonts-emoji \
+  noto-fonts-ttf \
+  noto-fonts-ttf-extra \
   pass \
   polybar \
   pulseaudio \
