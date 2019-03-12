@@ -1,4 +1,5 @@
 alias archive="arc archive"
+alias unarchive="arc unarchive"
 alias compress="arc compress"
 alias extract="arc extract"
 alias find="bfs"
