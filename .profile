@@ -1,7 +1,7 @@
 #!/bin/sh
 # Global configuration and init
 
-export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/bin:${HOME}/go/bin:${PATH}"
 
 export EDITOR="vi"
 export VISUAL="view"
