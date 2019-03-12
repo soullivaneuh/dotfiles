@@ -26,6 +26,7 @@ sudo xbps-install --yes --automatic \
   colordiff \
   curl \
   deepin-screenshot \
+  dep \
   docker \
   docker-compose \
   expect \
