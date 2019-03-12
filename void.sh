@@ -65,6 +65,7 @@ sudo xbps-install --yes --automatic \
   ripgrep \
   rofi \
   ruby \
+  ruby-devel \
   ruby-travis \
   rxvt-unicode \
   socklog-void \
