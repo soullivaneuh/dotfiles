@@ -1,3 +1,6 @@
+alias archive="arc archive"
+alias compress="arc compress"
+alias extract="arc extract"
 alias find="bfs"
 alias https="http --default-scheme=https"
 alias mux="tmuxifier"

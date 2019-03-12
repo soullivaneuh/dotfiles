@@ -14,6 +14,7 @@ sudo xbps-install --yes --automatic \
 sudo xbps-install -S
 
 sudo xbps-install --yes --automatic \
+  archiver \
   asciinema \
   atom \
   bash \
