@@ -5,7 +5,7 @@ font pango:sans bold 9
 floating_modifier $mod
 
 # Quick actions
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 bindsym $mod+d exec rofi -show run
 bindsym $mod+l exec i3lock --color 000000
 bindsym $mod+Shift+q kill

@@ -70,6 +70,7 @@ sudo xbps-install --yes --automatic \
   ssh-audit \
   steam \
   subversion \
+  terminator \
   tmux \
   vim-x11 \
   vpnc \
