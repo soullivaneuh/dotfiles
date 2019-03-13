@@ -21,3 +21,6 @@
 
 [[layers]]
   name = "lang#php"
+
+[[layers]]
+  name = "lang#go"
