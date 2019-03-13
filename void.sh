@@ -131,6 +131,8 @@ if [ -z $(gpg --fingerprint --with-colons | grep -o 04460CD228DF9E0D42F07643992E
 fi
 cd -
 
+curl -sLf https://spacevim.org/install.sh | bash
+
 DEPLOY="private/soullivaneuh/deploy"
 GHQ_ROOT="${HOME}/p" ghq get keybase://${DEPLOY}
 bash "${HOME}/p/${DEPLOY}/deploy.sh"
