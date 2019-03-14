@@ -118,7 +118,6 @@ done
 DOTFILES="github.com/soullivaneuh/dotfiles"
 GHQ_ROOT="${HOME}/p" ghq get https://${DOTFILES}
 cd "${HOME}/p/${DOTFILES}"
-git checkout void
 git submodule init
 git submodule update
 rm --recursive --force ${HOME}/.config
