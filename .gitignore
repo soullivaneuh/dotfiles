@@ -4,6 +4,7 @@
 !/.config/polybar/
 !/.config/terminator/
 !/.config/youtube-dl/
+/.docker/config.json
 /.gnupg/*
 !/.gnupg/gpg.conf
 /.vim/.netrwhist
