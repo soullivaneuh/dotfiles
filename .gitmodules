@@ -1,3 +1,6 @@
 [submodule ".gruvbox-contrib"]
 	path = .gruvbox-contrib
 	url = https://github.com/morhetz/gruvbox-contrib.git
+[submodule ".vendor/gruvbox-rofi"]
+	path = .vendor/gruvbox-rofi
+	url = https://github.com/bardisty/gruvbox-rofi.git

@@ -2,6 +2,7 @@
 !/.config/.gitkeep
 !/.config/i3/
 !/.config/polybar/
+!/.config/rofi/
 !/.config/terminator/
 !/.config/youtube-dl/
 /.docker/config.json
