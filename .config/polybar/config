@@ -26,7 +26,9 @@ width = 100%
 background = ${colors.background}
 foreground = ${colors.foreground}
 font-0 = "monospace:size=8;2"
-font-1 = "FontAwesome:size=8;2"
+font-1 = "Font Awesome 5 Free:style=Regular:size=12;3"
+font-2 = "Font Awesome 5 Free:style=Solid:size=12;3"
+font-3 = "Font Awesome 5 Brands:style=Regular:size=12;3"
 locale = en_US.UTF-8
 
 modules-left = i3
@@ -35,11 +37,11 @@ modules-right = pulseaudio cpu memory network keyboard date
 [module/cpu]
 type = internal/cpu
 interval = 0.5
-label = CPU %percentage%%
+label =  %percentage%%
 
 [module/date]
 type = internal/date
-date = %Y-%m-%d %H:%M
+date =  %Y-%m-%d %H:%M
 
 [module/i3]
 type = internal/i3
@@ -50,11 +52,12 @@ label-focused-padding = 1
 
 [module/keyboard]
 type = internal/xkeyboard
+label-layout =  %layout%
 
 [module/memory]
 type = internal/memory
 interval = 0.5
-label = RAM %percentage_used%%
+label =  %percentage_used%%
 
 [module/network]
 type = internal/network
@@ -64,5 +67,5 @@ label-connected = IP %local_ip% %downspeed%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-label-volume = Vol. %percentage%%
-label-muted = Mut. %percentage%%
+label-volume =  %percentage%%
+label-muted =  %percentage%%
