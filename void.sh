@@ -68,6 +68,7 @@ sudo xbps-install --yes --automatic \
   ruby-devel \
   ruby-travis \
   rxvt-unicode \
+  screenFetch \
   socklog-void \
   ssh-audit \
   steam \
