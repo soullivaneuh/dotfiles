@@ -55,6 +55,7 @@ sudo xbps-install --yes --automatic \
   make \
   nerd-fonts \
   nodejs \
+  numlockx \
   openjdk \
   noto-fonts-emoji \
   pass \
