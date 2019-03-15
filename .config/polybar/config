@@ -46,6 +46,8 @@ date =  %Y-%m-%d %H:%M
 [module/i3]
 type = internal/i3
 
+enable-scroll = false
+
 label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 1
