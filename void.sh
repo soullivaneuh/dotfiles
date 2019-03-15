@@ -76,6 +76,7 @@ sudo xbps-install --yes --automatic \
   tmux \
   vim-x11 \
   vpnc \
+  vpnc-scripts \
   wget \
   xcb-util-xrm \
   xinit \
