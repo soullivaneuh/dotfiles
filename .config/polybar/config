@@ -30,7 +30,7 @@ font-1 = "FontAwesome:size=8;2"
 locale = en_US.UTF-8
 
 modules-left = i3
-modules-right = pulseaudio cpu memory network date
+modules-right = pulseaudio cpu memory network keyboard date
 
 [module/cpu]
 type = internal/cpu
@@ -47,6 +47,9 @@ type = internal/i3
 label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 1
+
+[module/keyboard]
+type = internal/xkeyboard
 
 [module/memory]
 type = internal/memory

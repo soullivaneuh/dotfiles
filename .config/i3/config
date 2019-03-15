@@ -93,6 +93,9 @@ bar {
   status_command polybar bar
 }
 
+# Keyboard layout
+exec_always "setxkbmap -layout us,fr -option 'grp:alt_shift_toggle'"
+
 # Set the wallpaper
 exec feh --bg-fill ~/.wallhaven/wallhaven-318300.jpg
 
