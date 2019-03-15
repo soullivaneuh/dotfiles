@@ -32,6 +32,7 @@ sudo xbps-install --yes --automatic \
   expect \
   feh \
   font-firacode \
+  font-awesome5 \
   firefox \
   fzf \
   gcc \
