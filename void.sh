@@ -31,8 +31,9 @@ sudo xbps-install --yes --automatic \
   docker-compose \
   expect \
   feh \
-  font-firacode \
   font-awesome5 \
+  font-firacode \
+  font-hack-ttf \
   firefox \
   fzf \
   gcc \
@@ -57,7 +58,10 @@ sudo xbps-install --yes --automatic \
   nodejs \
   numlockx \
   openjdk \
+  noto-fonts-cjk \
   noto-fonts-emoji \
+  noto-fonts-ttf \
+  noto-fonts-ttf-extra \
   pass \
   papirus-icon-theme \
   polybar \

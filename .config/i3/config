@@ -1,7 +1,7 @@
 # SUPER entry touch
 set $mod Mod4
 
-font pango:sans bold 9
+font pango:monospace 8
 floating_modifier $mod
 
 # Quick actions

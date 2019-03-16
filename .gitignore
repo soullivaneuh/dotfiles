@@ -1,5 +1,6 @@
 /.config/*
 !/.config/.gitkeep
+!/.config/fontconfig/
 !/.config/i3/
 !/.config/polybar/
 !/.config/rofi/
