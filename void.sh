@@ -131,7 +131,7 @@ git submodule init
 git submodule update
 rm --recursive --force ${HOME}/.config
 make deploy init
-keybase login soullivaneuh
+keybase login soullivaneuh || true
 if [ -z $(gpg --fingerprint --with-colons | grep -o 04460CD228DF9E0D42F07643992EB6FAFD4E6361) ]; then
   keybase pgp export | gpg --import
   keybase pgp export --secret | gpg --import
