@@ -97,7 +97,7 @@ bar {
 exec_always "setxkbmap -layout us,fr -option 'grp:alt_shift_toggle'"
 
 # Set the wallpaper
-exec feh --bg-fill ~/.wallhaven/wallhaven-318300.jpg
+exec feh --bg-fill ~/.wallhaven/wallhaven-350972.jpg
 
 # Network
 exec_always --no-startup-id nm-applet --sm-disable
