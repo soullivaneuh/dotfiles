@@ -1,1 +1,4 @@
 rofi.theme: ~/.vendor/gruvbox-rofi/gruvbox-dark.rasi
+rofi.show-icons: true
+rofi.icon-theme: Papirus
+rofi.modi: window,drun,ssh

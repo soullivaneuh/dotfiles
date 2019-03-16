@@ -59,6 +59,7 @@ sudo xbps-install --yes --automatic \
   openjdk \
   noto-fonts-emoji \
   pass \
+  papirus-icon-theme \
   polybar \
   pulseaudio \
   ranger \

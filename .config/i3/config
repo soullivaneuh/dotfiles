@@ -6,7 +6,7 @@ floating_modifier $mod
 
 # Quick actions
 bindsym $mod+Return exec terminator
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 bindsym $mod+l exec i3lock --color 000000
 bindsym $mod+Shift+q kill
 
