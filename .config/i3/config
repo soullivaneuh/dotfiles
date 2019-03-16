@@ -1,9 +1,6 @@
 # SUPER entry touch
 set $mod Mod4
 
-font pango:monospace 8
-floating_modifier $mod
-
 # Quick actions
 bindsym $mod+Return exec terminator
 bindsym $mod+d exec rofi -show combi
@@ -87,12 +84,6 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl-sink-auto set-sink-volum
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl-sink-auto set-sink-volume -5%
 bindsym XF86AudioMute exec --no-startup-id pactl-sink-auto set-sink-mute toggle
 
-bar {
-  # Don't show the default i3bar
-  mode invisible
-  status_command polybar bar
-}
-
 # Keyboard layout
 exec_always "setxkbmap -layout us,fr -option 'grp:alt_shift_toggle'"
 
@@ -101,3 +92,29 @@ exec feh --bg-fill ~/.wallhaven/wallhaven-350972.jpg
 
 # Network
 exec_always --no-startup-id nm-applet --sm-disable
+
+# Theming
+font pango:monospace 8
+floating_modifier $mod
+
+# @see https://github.com/a-schaefers/i3-wm-gruvbox-theme/blob/master/i3/config
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
+client.focused          $gray $gray $darkgray $purple $darkgray
+client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.urgent           $red $red $white $red $red
+
+bar {
+  # Don't show the default i3bar
+  mode invisible
+  status_command polybar bar
+}
