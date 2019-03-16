@@ -160,7 +160,7 @@ ln --symbolic --force "${HOME}/p/${DOTFILES}/packages.list"
 ln --symbolic --force "${HOME}/p/${DOTFILES}/xbps-src.conf"
 ./xbps-mini-builder
 sudo xbps-install \
-  slack-desktop \
+  $(cat packages.list) \
   --repository ./void-packages/hostdir/binpkgs/nonfree
 cd -
 
