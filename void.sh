@@ -42,6 +42,7 @@ sudo xbps-install --yes --automatic \
   gnupg \
   go \
   google-cloud-sdk \
+  google-fonts-ttf \
   gource \
   httpie \
   htop \
