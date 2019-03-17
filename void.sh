@@ -84,6 +84,7 @@ sudo xbps-install --yes --automatic \
   vim-x11 \
   vpnc \
   vpnc-scripts \
+  WoeUSB \
   wget \
   xcb-util-xrm \
   xinit \
