@@ -20,6 +20,7 @@ sudo xbps-install --yes --automatic \
   bash \
   bfs \
   bind-utils \
+  bootiso \
   browserpass \
   caddy \
   chromium \
