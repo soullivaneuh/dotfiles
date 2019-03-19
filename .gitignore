@@ -9,6 +9,7 @@
 /.docker/config.json
 /.gnupg/*
 !/.gnupg/gpg.conf
+/.SpaceVim.d/.netrwhist
 /.vim/.netrwhist
 /.vim/autoload/plug.vim
 /.vim/plugged/
