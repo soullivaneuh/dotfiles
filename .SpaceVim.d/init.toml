@@ -3,8 +3,8 @@
   colorscheme = "gruvbox"
   colorscheme_bg = "dark"
   enable_guicolors = true
-  statusline_separator = "arrow"
-  statusline_inactive_separator = "arrow"
+  statusline_separator = "nil"
+  statusline_inactive_separator = "nil"
   buffer_index_type = 4
   enable_tabline_filetype_icon = true
   enable_statusline_mode = false
