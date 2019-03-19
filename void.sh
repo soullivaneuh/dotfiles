@@ -76,6 +76,7 @@ sudo xbps-install --yes --automatic \
   rxvt-unicode \
   screenFetch \
   socklog-void \
+  spacefm \
   ssh-audit \
   steam \
   subversion \
