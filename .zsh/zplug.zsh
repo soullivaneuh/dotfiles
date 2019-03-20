@@ -11,7 +11,6 @@ zplug "junegunn/fzf", use:"shell/*.zsh", defer:2
 zplug "kubernetes/kompose", from:gh-r, as:command
 zplug "motemen/ghq", use:"zsh"
 zplug "mrowa44/emojify", as:command
-zplug "stedolan/jq", as:command, from:gh-r, rename-to:jq
 
 zplug "plugins/capistrano", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh

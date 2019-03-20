@@ -52,6 +52,8 @@ sudo xbps-install --yes --automatic \
   i3lock \
   i3status \
   inetutils \
+  jj \
+  jq \
   kbfs \
   keybase \
   keybase-desktop \
