@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+xbps-install --sync
+
+pkg=$(xbps-query --repository --search '*' | fzf | cut -d ' ' -f 2 | rev | cut -d '-' -f2- | rev)
+
+xbps-query --repository ${pkg}
+sudo xbps-install --automatic ${pkg}
