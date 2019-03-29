@@ -11,4 +11,3 @@ if ! [[ -L /etc/docker/daemon.json ]]; then
   sudo ln --symbolic ${HOME}/.docker/daemon.json /etc/docker/daemon.json
   echo "Docker settings replaced. Please restart docker."
 fi
-

@@ -1,6 +1,0 @@
-#!/usr/bin/env zsh
-
-command=$1
-shift
-
-pactl $command $(pacmd info | grep 'Default sink name: ' | cut -d: -f2 | xargs) $@

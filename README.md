@@ -10,7 +10,7 @@ Recommended to get all the needed packages installed for a working desktop OS.
 
 ```
 sudo xbps-install -A curl
-curl -L http://void.sulli.cc | sh
+curl -L http://manjaro.sulli.cc | sh
 ```
 
 ### Manual

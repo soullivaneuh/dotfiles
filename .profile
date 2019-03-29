@@ -3,6 +3,7 @@
 
 export PATH="${HOME}/bin:${HOME}/go/bin:${PATH}"
 
+export TERMINAL="termite"
 export EDITOR="vi"
 export VISUAL="view"
 export FILE="ranger"
@@ -18,13 +19,13 @@ export LESS_TERMCAP_me=$'\e[m'
 export LESS_TERMCAP_ue=$'\e[m'
 export LESS_TERMCAP_se=$'\e[m'
 
-# @see https://github.com/jaagr/polybar/issues/339#issuecomment-447674287
-export DEFAULT_NETWORK_INTERFACE=$(ip route | grep '^default' | awk '{print $5}' | head -n1)
-
 if [[ -f ~/.profile.local ]]; then
   source ~/.profile.local
 fi
 
 eval "$(hub alias -s)"
+
+# Default numlock activation.
+numlockx on
 
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx

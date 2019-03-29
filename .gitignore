@@ -1,7 +1,12 @@
 /.config/*
 !/.config/.gitkeep
+!/.config/dunst/
 !/.config/fontconfig/
 !/.config/i3/
+!/.config/Kvantum
+!/.config/oomox/
+/.config/oomox/*
+!/.config/oomox/colors/
 !/.config/polybar/
 !/.config/rofi/
 !/.config/terminator/
