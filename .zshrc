@@ -36,3 +36,5 @@ fi
 zplug load ${LOAD_FLAGS}
 
 eval "$(tmuxifier init -)"
+
+cowsay $(curl -s https://jerome1337.o6s.io/henri-facts | jq ".text")
