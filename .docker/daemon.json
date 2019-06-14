@@ -4,7 +4,5 @@
   ],
   "insecure-registries": [
     "registry.int.nexylan.net"
-  ],
-  "userland-proxy": false,
-  "userns-remap": "sullivan"
+  ]
 }
