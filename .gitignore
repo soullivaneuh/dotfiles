@@ -10,6 +10,7 @@
 !/.config/polybar/
 !/.config/rofi/
 !/.config/terminator/
+!/.config/termite/
 !/.config/youtube-dl/
 /.docker/config.json
 /.gnupg/*
