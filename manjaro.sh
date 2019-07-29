@@ -35,6 +35,7 @@ yay --sync --needed --noconfirm \
   browserpass \
   bootiso \
   chromium \
+  code \
   colordiff \
   cowsay \
   curl \
