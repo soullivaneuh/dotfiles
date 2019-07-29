@@ -142,6 +142,7 @@ if [ -z $(gpg --fingerprint --with-colons | grep -o 04460CD228DF9E0D42F07643992E
  ./gpg-trust.exp FD4E6361
 fi
 cd -
+sudo ln --symbolic /run/user/$(id -u)/keybase /keybase
 
 curl -sLf https://spacevim.org/install.sh | bash
 
