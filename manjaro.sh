@@ -77,6 +77,7 @@ yay --sync --needed --noconfirm \
   ripgrep \
   rofi \
   ruby \
+  ruby-bundler \
   screenfetch \
   snapd \
   ssh-audit \
