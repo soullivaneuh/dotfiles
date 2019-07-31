@@ -92,12 +92,14 @@ yay --sync --needed --noconfirm \
   vi-vim-symlink \
   wget \
   xfce4-screenshooter \
+  xfce4-terminal \
   zsh \
   && echo 'Packages installation finished! \o/'
 
 # Replace default terminal
-sudo rm /usr/bin/terminal
-sudo ln -s /usr/bin/termite /usr/bin/terminal
+TERMINAL_PATH=$(which terminal)
+sudo rm ${TERMINAL_PATH}
+sudo ln -s $(which xfce4-terminal) ${TERMINAL_PATH}
 
 sudo systemctl enable --now snapd
 sudo systemctl start snapd && sleep 3

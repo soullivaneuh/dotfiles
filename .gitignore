@@ -12,6 +12,11 @@
 !/.config/terminator/
 !/.config/termite/
 !/.config/youtube-dl/
+!/.config/xfce4
+/.config/xfce4/*
+!/.config/xfce4/terminal
+/.config/xfce4/terminal/*
+!/.config/xfce4/terminal/terminalrc
 /.docker/config.json
 /.gnupg/*
 !/.gnupg/gpg.conf
