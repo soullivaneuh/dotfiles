@@ -74,6 +74,7 @@ yay --sync --needed --noconfirm \
   otf-font-awesome \
   papirus-icon-theme \
   pass \
+  php \
   polybar \
   ripgrep \
   rofi \
