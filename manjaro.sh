@@ -37,6 +37,7 @@ yay --sync --needed --noconfirm \
   chromium \
   code \
   colordiff \
+  composer \
   cowsay \
   curl \
   dep \
