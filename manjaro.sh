@@ -63,6 +63,7 @@ yay --sync --needed --noconfirm \
   jdk-openjdk \
   jq \
   keybase-gui \
+  kubernetes-helm-bin \
   make \
   nodejs \
   noto-fonts \
