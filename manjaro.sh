@@ -169,4 +169,6 @@ ln --symbolic --force "${HOME}/p/${GIT_SRC}/contrib/diff-highlight/diff-highligh
 
 sudo chsh -s /bin/zsh $(whoami)
 
+sudo systemctl enable docker.service
+
 echo "Please reboot."
