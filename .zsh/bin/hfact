@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+HFACTS_PATH=/tmp/${USER}/hfacts
+mkdir --parent $(dirname ${HFACTS_PATH})
+if [[ ! -f ${HFACTS_PATH} ]]; then
+  echo "Loading..."
+  http https://raw.githubusercontent.com/Jerome1337/henri-facts/master/henri-facts/facts.json \
+    | jq --raw-output '.facts[]' > ${HFACTS_PATH}
+fi
+
+shuf --head-count 1 ${HFACTS_PATH} | cowsay

@@ -36,3 +36,5 @@ fi
 zplug load ${LOAD_FLAGS}
 
 eval "$(tmuxifier init -)"
+
+hfact
