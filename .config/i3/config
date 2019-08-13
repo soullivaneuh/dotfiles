@@ -129,7 +129,7 @@ bindsym $mod+Ctrl+Left workspace prev
 #                 set $ws2 2:
 set $ws1 1:
 set $ws2 2:
-set $ws3 3
+set $ws3 3:
 set $ws4 4
 set $ws5 5
 set $ws6 6
@@ -172,6 +172,7 @@ bindsym $mod+Shift+9 move container to workspace $ws8; workspace $ws9
 
 # Open applications on specific workspaces
 assign [class="Keybase"] $ws1
+assign [class="Slack"] $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -277,6 +278,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 exec --no-startup-id keybase-gui
+exec --no-startup-id slack
 exec --no-startup-id i3-msg 'workspace $ws2; exec google-chrome-stable'
 
 # Color palette used for the terminal ( ~/.Xresources file )
