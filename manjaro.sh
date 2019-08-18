@@ -32,6 +32,7 @@ yay --sync --needed --noconfirm \
   atool \
   asciinema \
   bfs \
+  bind-tools \
   browserpass \
   bootiso \
   chromium \
