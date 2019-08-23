@@ -121,6 +121,7 @@ sudo snap install webstorm --classic
 sudo snap install microk8s --classic
 sudo snap alias microk8s.kubectl kubectl
 microk8s.start
+microk8s.kubectl config view --raw > $HOME/.kube/config
 helm init --upgrade --wait
 
 sudo usermod --append --groups docker $(whoami)
