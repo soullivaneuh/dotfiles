@@ -2,12 +2,12 @@ set -e
 
 plist=/tmp/sullivan/plist
 plist_ghq=/tmp/sullivan/plist-ghq
-plist_github=/tmp/sullivan/plist-github
+plist_dist=/tmp/sullivan/plist-dist
 
 ghq list > ${plist_ghq}
-test -f ${plist_github} || hub api --paginate 'user/repos?per_page=100' | jq -r '.[].full_name' | sed -e 's#^#github.com/#' > ${plist_github}
+test -f ${plist_dist} || termite --exec="sh ${HOME}/.config/rofi/projects_list.sh ${plist_dist}"
 
-cat ${plist_ghq} ${plist_github} | awk '!x[$0]++' > ${plist}
+cat ${plist_ghq} ${plist_dist} | awk '!x[$0]++' > ${plist}
 
 selection=$(rofi -dmenu -p "Project" -no-custom -i -input ${plist})
 
@@ -18,7 +18,7 @@ PROJECT_PATH=${HOME}/p/${selection}
 
 i3-msg workspace ${selection}
 if [[ ! -d "${PROJECT_PATH}" ]]; then
-  termite --exec="ghq get ${selection}"
+  termite --exec="ghq get -p ${selection}"
 fi
 
 # Visual code launch

@@ -28,6 +28,7 @@ fi
 yay --remove --noconfirm vim vi || true
 
 yay --sync --needed --noconfirm \
+  aur/lab-bin \
   atom \
   atool \
   asciinema \
