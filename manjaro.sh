@@ -182,4 +182,7 @@ sudo systemctl enable docker.service
 # Some system try to call chrom with google-chrome bin
 sudo ln --symbolic /usr/bin/google-chrome-stable /usr/bin/google-chrome
 
+# Visual Studio Code base setup
+code --install-extension Shan.code-settings-sync
+
 echo "Please reboot."
