@@ -14,12 +14,14 @@ selection=$(rofi -dmenu -p "Project" -no-custom -i -input ${plist})
 if [[ -z "${selection}" ]]; then
   exit 0
 fi
+PROJECT_PATH=${HOME}/p/${selection}
 
 i3-msg workspace ${selection}
-termite --exec="ghq get ${selection}"
+if [[ ! -d "${PROJECT_PATH}" ]]; then
+  termite --exec="ghq get ${selection}"
+fi
 
 # Visual code launch
-PROJECT_PATH=${HOME}/p/${selection}
 code ${PROJECT_PATH}
 
 # Firefox profile setup
