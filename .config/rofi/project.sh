@@ -4,8 +4,6 @@ selection=$(ghq list | rofi -dmenu -p "Project" -no-custom)
 
 if [[ ! -z "${selection}" ]]; then
   i3-msg workspace ${selection}
-  # Avoid buggy firefox resolution issue (bad website render).
-  sleep 0.2
 
   # Visual code launch
   PROJECT_PATH=${HOME}/p/${selection}
