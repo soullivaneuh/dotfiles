@@ -16,6 +16,8 @@ if [[ ! -z "${selection}" ]]; then
   ln --force --symbolic ${DEFAULT_PROFILE}/signedInUser.json ${FIREFOX_PROFILE}
   ln --force --symbolic ${DEFAULT_PROFILE}/logins.json ${FIREFOX_PROFILE}
   ln --force --symbolic ${DEFAULT_PROFILE}/key4.db ${FIREFOX_PROFILE}
+  cp ${DEFAULT_PROFILE}/cookies.sqlite ${FIREFOX_PROFILE}
+  cp ${DEFAULT_PROFILE}/cookies.sqlite-wal ${FIREFOX_PROFILE}
   cp ~/.config/rofi/firefox_pref.js ${FIREFOX_PROFILE}/user.js
 
   # Frifox session launch
