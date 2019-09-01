@@ -15,8 +15,8 @@ if [[ -z "${selection}" ]]; then
   exit 0
 fi
 
-ghq get ${selection}
 i3-msg workspace ${selection}
+termite --exec="ghq get ${selection}"
 
 # Visual code launch
 PROJECT_PATH=${HOME}/p/${selection}
