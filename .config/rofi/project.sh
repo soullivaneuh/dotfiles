@@ -2,14 +2,14 @@ set -e
 
 selection=$(ghq list | rofi -dmenu -p "Project" -no-custom)
 
-FIREFOX_PID=~/.firefox-dev-pid
-touch ${FIREFOX_PID}
-kill $(cat ${FIREFOX_PID}) || true
-
 if [[ ! -z "${selection}" ]]; then
+  i3-msg workspace ${selection}
+  # Avoid buggy firefox resolution issue (bad website render).
+  sleep 0.2
+
   # Visual code launch
   PROJECT_PATH=${HOME}/p/${selection}
-  code --reuse-window ${PROJECT_PATH}
+  code ${PROJECT_PATH}
 
   # Firefox profile setup
   FIREFOX_PROFILE=${HOME}/.firefox-projects/${selection}
@@ -22,10 +22,13 @@ if [[ ! -z "${selection}" ]]; then
 
   # Frifox session launch
   PROJECT_URL=http://${selection}
-  firefox-developer-edition \
-    --profile ${FIREFOX_PROFILE} \
-    ${PROJECT_URL} &
-  echo $! > ${FIREFOX_PID}
+  FIREFOX_PID=$(ps ax | grep ${FIREFOX_PROFILE} | grep -v grep | awk {'print $1'})
+  if [[ -z "${FIREFOX_PID}" ]]; then
+    firefox-developer-edition \
+      --profile ${FIREFOX_PROFILE} \
+      ${PROJECT_URL} &
+    echo $! > ${FIREFOX_PID}
+  fi
 fi
 
 exit 0
