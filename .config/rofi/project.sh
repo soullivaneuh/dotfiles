@@ -1,34 +1,46 @@
 set -e
 
-selection=$(ghq list | rofi -dmenu -p "Project" -no-custom)
+plist=/tmp/sullivan/plist
+plist_ghq=/tmp/sullivan/plist-ghq
+plist_github=/tmp/sullivan/plist-github
 
-if [[ ! -z "${selection}" ]]; then
-  i3-msg workspace ${selection}
+ghq list > ${plist_ghq}
+test -f ${plist_github} || hub api --paginate 'user/repos?per_page=100' | jq -r '.[].full_name' | sed -e 's#^#github.com/#' > ${plist_github}
 
-  # Visual code launch
-  PROJECT_PATH=${HOME}/p/${selection}
-  code ${PROJECT_PATH}
+cat ${plist_ghq} ${plist_github} | awk '!x[$0]++' > ${plist}
 
-  # Firefox profile setup
-  FIREFOX_PROFILE=${HOME}/.firefox-projects/${selection}
-  DEFAULT_PROFILE=${HOME}/.mozilla/firefox/$(grep 'Default=' ${HOME}/.mozilla/firefox/profiles.ini | head -n 1 | cut -d = -f2)
-  mkdir --parent ${FIREFOX_PROFILE}
-  ln --force --symbolic ${DEFAULT_PROFILE}/signedInUser.json ${FIREFOX_PROFILE}
-  ln --force --symbolic ${DEFAULT_PROFILE}/logins.json ${FIREFOX_PROFILE}
-  ln --force --symbolic ${DEFAULT_PROFILE}/key4.db ${FIREFOX_PROFILE}
-  cp ${DEFAULT_PROFILE}/cookies.sqlite ${FIREFOX_PROFILE}
-  cp ${DEFAULT_PROFILE}/cookies.sqlite-wal ${FIREFOX_PROFILE}
-  cp ~/.config/rofi/firefox_pref.js ${FIREFOX_PROFILE}/user.js
+selection=$(rofi -dmenu -p "Project" -no-custom -i -input ${plist})
 
-  # Frifox session launch
-  PROJECT_URL=http://${selection}
-  FIREFOX_PID=$(ps ax | grep ${FIREFOX_PROFILE} | grep -v grep | awk {'print $1'})
-  if [[ -z "${FIREFOX_PID}" ]]; then
-    firefox-developer-edition \
-      --profile ${FIREFOX_PROFILE} \
-      ${PROJECT_URL} &
-    echo $! > ${FIREFOX_PID}
-  fi
+if [[ -z "${selection}" ]]; then
+  exit 0
+fi
+
+ghq get ${selection}
+i3-msg workspace ${selection}
+
+# Visual code launch
+PROJECT_PATH=${HOME}/p/${selection}
+code ${PROJECT_PATH}
+
+# Firefox profile setup
+FIREFOX_PROFILE=${HOME}/.firefox-projects/${selection}
+DEFAULT_PROFILE=${HOME}/.mozilla/firefox/$(grep 'Default=' ${HOME}/.mozilla/firefox/profiles.ini | head -n 1 | cut -d = -f2)
+mkdir --parent ${FIREFOX_PROFILE}
+ln --force --symbolic ${DEFAULT_PROFILE}/signedInUser.json ${FIREFOX_PROFILE}
+ln --force --symbolic ${DEFAULT_PROFILE}/logins.json ${FIREFOX_PROFILE}
+ln --force --symbolic ${DEFAULT_PROFILE}/key4.db ${FIREFOX_PROFILE}
+cp ${DEFAULT_PROFILE}/cookies.sqlite ${FIREFOX_PROFILE}
+cp ${DEFAULT_PROFILE}/cookies.sqlite-wal ${FIREFOX_PROFILE}
+cp ~/.config/rofi/firefox_pref.js ${FIREFOX_PROFILE}/user.js
+
+# Frifox session launch
+PROJECT_URL=http://${selection}
+FIREFOX_PID=$(ps ax | grep ${FIREFOX_PROFILE} | grep -v grep | awk {'print $1'})
+if [[ -z "${FIREFOX_PID}" ]]; then
+  firefox-developer-edition \
+    --profile ${FIREFOX_PROFILE} \
+    ${PROJECT_URL} &
+  echo $! > ${FIREFOX_PID}
 fi
 
 exit 0
