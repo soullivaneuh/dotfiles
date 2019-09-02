@@ -280,8 +280,7 @@ exec_always --no-startup-id fix_xcursor
 
 exec --no-startup-id keybase-gui
 exec --no-startup-id slack
-exec --no-startup-id i3-msg 'workspace $ws2; exec google-chrome-stable'
-exec --no-startup-id google-chrome-stable --app='https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&Email=soullivaneuh@gmail.com&continue=https://play.google.com/music/listen?u=soullivaneuh@gmail.com'
+exec --no-startup-id i3-msg 'workspace $ws2; exec firefox-developer-edition'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
