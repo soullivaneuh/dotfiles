@@ -36,6 +36,3 @@ fi
 zplug load ${LOAD_FLAGS}
 
 eval "$(tmuxifier init -)"
-
-hfact
-docker run -it --rm djoudix/git-tip git-tip
