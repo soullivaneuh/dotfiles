@@ -125,7 +125,8 @@ sudo snap alias microk8s.kubectl kubectl
 /snap/bin/microk8s.kubectl config view --raw > $HOME/.kube/config
 helm init --upgrade --wait
 
-sudo usermod --append --groups docker $(whoami)
+sudo usermod --append --groups docker "$(whoami)"
+sudo usermod --append --groups microk8s "$(whoami)"
 
 DOTFILES="github.com/soullivaneuh/dotfiles"
 GHQ_ROOT="${HOME}/p" ghq get https://${DOTFILES}
