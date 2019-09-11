@@ -28,4 +28,8 @@ eval "$(hub alias -s)"
 # Default numlock activation.
 numlockx on
 
+if [[ -f ~/.screenlayout/default.sh ]]; then
+  sh ~/.screenlayout/default.sh
+fi
+
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
