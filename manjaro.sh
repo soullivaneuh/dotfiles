@@ -46,6 +46,7 @@ yay --sync --needed --noconfirm \
   docker \
   docker-compose \
   expect \
+  extra/bind-tools \
   firefox \
   firefox-developer-edition \
   fzf \
