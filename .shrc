@@ -3,4 +3,4 @@
 export GPG_TTY=$(tty)
 export RIPGREP_CONFIG_PATH=${HOME}/.ripgreprc
 
-screenfetch -c 4,7
+screenfetch -c "4;1,7;22"
