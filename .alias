@@ -8,3 +8,12 @@ alias find="bfs"
 alias https="http --default-scheme=https"
 alias mux="tmuxifier"
 alias p="pwd"
+# https://gitlab.com/nexylan/pretty
+alias pretty="\
+  docker run --rm \
+  --env IMAGE_TAG \
+  --volume "${PWD}":"${PWD}" \
+  --volume /var/run/docker.sock:/var/run/docker.sock \
+  --workdir ${PWD} \
+  registry.gitlab.com/nexylan/pretty:master \
+"
