@@ -5,6 +5,8 @@ zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 zplug "~/.zsh", from:local, use:"*_*.zsh", defer:3
 
 zplug "b4b4r07/emoji-cli"
+zplug "scaleway/scaleway-cli", as:command, from:gh-r, rename-to:scw
+zplug "scaleway/docker-machine-driver-scaleway", as:command, from:gh-r
 zplug "GoogleContainerTools/skaffold", as:command, from:gh-r, rename-to:skaffold
 zplug "jimeh/tmuxifier", as:command, use:"bin/*"
 zplug "junegunn/fzf", use:"shell/*.zsh", defer:2
