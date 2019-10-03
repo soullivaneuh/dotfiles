@@ -4,7 +4,7 @@ Here is my personal dotfiles and a way to run one command installation.
 
 ## Installation
 
-### Quick install (from void-linux)
+### Quick install (from Manjaro)
 
 Recommended to get all the needed packages installed for a working desktop OS.
 
