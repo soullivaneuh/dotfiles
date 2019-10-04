@@ -1,6 +1,6 @@
 providers:
   docker:
-    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
+    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.localhost`)"
 
 api:
   insecure: true
