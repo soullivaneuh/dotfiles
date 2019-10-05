@@ -8,6 +8,6 @@ ln --symbolic --force ${HOME}/.gruvbox-contrib/xfce4-terminal/*.theme \
 compose="docker-compose --project-name desktop --file ${HOME}/.stack.yml"
 ${compose} pull
 ${compose} build --pull
-${compose} up --detach
+${compose} up --remove-orphans --detach
 
 echo "Enjoy!"
