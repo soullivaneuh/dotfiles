@@ -1,12 +1,19 @@
 version: "3.7"
 
 services:
+  dns:
+    build: .services/dns
+    ports:
+      - "53:53"
+      - "53:53/udp"
+
   router:
     build: .services/router
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 81:8080
+      - "80:80"
+      - "81:8080"
     restart: always
 
   portainer:
@@ -15,18 +22,18 @@ services:
       - portainer:/data
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 9000:9000
+      - "9000:9000"
     environment:
       DOCKER_CLIENT_TIMEOUT: 60
     restart: always
 
   home:
     build: .services/home
-    labels:
-      - "traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)"
 
   whoami:
     image: containous/whoami
+    labels:
+      - "traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)"
 
 volumes:
   portainer: ~
