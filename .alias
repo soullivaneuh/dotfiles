@@ -6,6 +6,7 @@ alias files="ranger"
 alias f="files"
 alias find="bfs"
 alias https="http --default-scheme=https"
+alias m="make"
 alias mux="tmuxifier"
 alias p="pwd"
 # https://gitlab.com/nexylan/pretty
