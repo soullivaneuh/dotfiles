@@ -9,6 +9,7 @@ alias https="http --default-scheme=https"
 alias m="make"
 alias mux="tmuxifier"
 alias p="pwd"
+alias gs="g s"
 # https://gitlab.com/nexylan/pretty
 alias pretty="\
   docker run --rm \
