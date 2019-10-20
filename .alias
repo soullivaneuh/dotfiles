@@ -17,4 +17,4 @@ alias pretty="\
   --volume "${PWD}":"${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
   --workdir ${PWD} \
-  registry.gitlab.com/nexylan/pretty:master"
+  registry.gitlab.com/nexylan/pretty"
