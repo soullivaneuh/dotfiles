@@ -119,15 +119,7 @@ sudo snap install pycharm-professional --classic
 sudo snap install rubymine --classic
 sudo snap install webstorm --classic
 
-# Kubernetes specific installation
-sudo snap install microk8s --classic
-sudo snap alias microk8s.kubectl kubectl
-/snap/bin/microk8s.start
-/snap/bin/microk8s.kubectl config view --raw > $HOME/.kube/config
-helm init --upgrade --wait
-
 sudo usermod --append --groups docker "$(whoami)"
-sudo usermod --append --groups microk8s "$(whoami)"
 
 DOTFILES="github.com/soullivaneuh/dotfiles"
 GHQ_ROOT="${HOME}/p" ghq get https://${DOTFILES}
