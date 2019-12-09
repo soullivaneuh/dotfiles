@@ -85,6 +85,7 @@ yay --sync --needed --noconfirm \
   ruby \
   ruby-bundler \
   screenfetch \
+  slack-desktop \
   snapd \
   ssh-audit \
   steam \
@@ -111,7 +112,6 @@ sudo systemctl enable --now snapd
 sudo systemctl start snapd && sleep 3
 sudo ln --symbolic --force /var/lib/snapd/snap /snap
 
-sudo snap install slack --classic
 sudo snap install discord
 sudo snap install goland --classic
 sudo snap install phpstorm --classic
