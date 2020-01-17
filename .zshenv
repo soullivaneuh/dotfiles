@@ -2,7 +2,7 @@ HYPHEN_INSENSITIVE="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
-export PATH="${HOME}/.zsh/bin:${HOME}/.gem/bin:${PATH}"
+export PATH="${HOME}/.zsh/bin:${HOME}/.gem/bin:${HOME}/.cargo/bin:${PATH}"
 
 export EMOJI_CLI_KEYBIND="^e"
 
