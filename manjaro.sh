@@ -180,4 +180,6 @@ sudo ln --symbolic /usr/bin/google-chrome-stable /usr/bin/google-chrome
 # Visual Studio Code base setup
 code --install-extension Shan.code-settings-sync
 
+xdg-settings set default-web-browser firefox-developer-edition.desktop
+
 echo "Please reboot."
