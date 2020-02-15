@@ -24,8 +24,6 @@
 	addm = !git-ls-files -m -z | xargs -0 git-add && git status
 	addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status
 	rmm = !git ls-files -d -z | xargs -0 git-rm && git status
-	undo = !git reset --soft HEAD^
-	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
 	# https://github.com/caarlos0/git-add-remote
 	add-upstream = !zsh -ic \"add-upstream $*\"
 	add-remote = !zsh -ic \"add-remote $*\"

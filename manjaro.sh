@@ -52,6 +52,7 @@ yay --sync --needed --noconfirm \
   fzf \
   ghq \
   gnupg \
+  git-extras \
   go \
   google-chrome \
   google-cloud-sdk \
