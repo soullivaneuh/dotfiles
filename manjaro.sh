@@ -43,6 +43,7 @@ yay --sync --needed --noconfirm \
   cowsay \
   curl \
   dep \
+  discord \
   docker \
   docker-compose \
   expect \
