@@ -11,9 +11,9 @@ alias mux="tmuxifier"
 alias p="pwd"
 alias gs="g s"
 # https://gitlab.com/nexylan/pretty
-alias pretty="docker run --rm \
+alias pretty='docker run --rm \
   --env IMAGE_TAG \
   --volume "${PWD}":"${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
   --workdir ${PWD} \
-  registry.gitlab.com/nexylan/pretty"
+  registry.gitlab.com/nexylan/pretty'
