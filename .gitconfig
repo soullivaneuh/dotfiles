@@ -57,3 +57,5 @@
 
 [gpg]
 	program = /usr/bin/gpg2
+[pull]
+	rebase = false
