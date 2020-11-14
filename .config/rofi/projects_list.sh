@@ -16,9 +16,4 @@ LAB_CORE_HOST="https://git.nexylan.net" LAB_CORE_TOKEN=${GITLAB_NEXYLAN_TOKEN} l
   | sed -e 's#^#git.nexylan.net/#' \
   >> ${1}
 
-echo "Fetching git.sullivansenechal.com projects..."
-LAB_CORE_HOST="https://git.sullivansenechal.com" LAB_CORE_TOKEN=${GITLAB_SULLI_TOKEN} lab project list --member --all \
-  | sed -e 's#^#git.sullivansenechal.com/#' \
-  >> ${1}
-
 sort ${1}
