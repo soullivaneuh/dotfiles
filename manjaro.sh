@@ -29,12 +29,10 @@ yay --remove --noconfirm vim vi || true
 
 yay --sync --needed --noconfirm \
   aur/lab-bin \
-  atom \
   atool \
   asciinema \
   bfs \
   bind-tools \
-  browserpass \
   bootiso \
   chromium \
   code \
@@ -68,7 +66,6 @@ yay --sync --needed --noconfirm \
   jdk-openjdk \
   jq \
   keybase-gui \
-  kubernetes-helm-bin \
   make \
   nodejs \
   noto-fonts \
@@ -79,7 +76,6 @@ yay --sync --needed --noconfirm \
   otf-fira-code \
   otf-font-awesome \
   papirus-icon-theme \
-  pass \
   php \
   polybar \
   ripgrep \
@@ -88,7 +84,6 @@ yay --sync --needed --noconfirm \
   ruby-bundler \
   screenfetch \
   slack-desktop \
-  snapd \
   ssh-audit \
   steam \
   subversion \
@@ -109,13 +104,6 @@ yay --sync --needed --noconfirm \
 TERMINAL_PATH=$(which terminal)
 sudo rm ${TERMINAL_PATH}
 sudo ln -s $(which xfce4-terminal) ${TERMINAL_PATH}
-
-sudo systemctl enable --now snapd
-sudo systemctl start snapd && sleep 3
-sudo ln --symbolic --force /var/lib/snapd/snap /snap
-
-sudo snap install discord
-sudo snap install goland --classic
 
 sudo usermod --append --groups docker "$(whoami)"
 
