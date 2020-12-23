@@ -112,6 +112,7 @@ GHQ_ROOT="${HOME}/p" ghq get https://${DOTFILES}
 cd "${HOME}/p/${DOTFILES}"
 git submodule init
 git submodule update
+git remote set-url origin git@${DOTFILES}.git
 CONFIG_PATH="${HOME}/.config"
 if [ -d ${CONFIG_PATH} ]; then
   mv ${CONFIG_PATH} ${CONFIG_PATH}.back
