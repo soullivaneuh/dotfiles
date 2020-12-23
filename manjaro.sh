@@ -116,10 +116,6 @@ sudo ln --symbolic --force /var/lib/snapd/snap /snap
 
 sudo snap install discord
 sudo snap install goland --classic
-sudo snap install phpstorm --classic
-sudo snap install pycharm-professional --classic
-sudo snap install rubymine --classic
-sudo snap install webstorm --classic
 
 sudo usermod --append --groups docker "$(whoami)"
 
