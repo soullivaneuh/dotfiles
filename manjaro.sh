@@ -160,6 +160,8 @@ ln --symbolic --force "${HOME}/p/${GIT_SRC}/contrib/diff-highlight/diff-highligh
 sudo chsh -s /bin/zsh $(whoami)
 
 sudo systemctl enable docker.service
+# NTP service for datetime sync.
+sudo systemctl enable systemd-timesyncd.service
 
 # Some system try to call chrom with google-chrome bin
 sudo ln --symbolic /usr/bin/google-chrome-stable /usr/bin/google-chrome
