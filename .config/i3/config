@@ -283,6 +283,7 @@ exec_always --no-startup-id fix_xcursor
 exec --no-startup-id keybase-gui
 exec --no-startup-id slack
 exec --no-startup-id discord
+exec --no-startup-id code
 exec --no-startup-id i3-msg 'workspace $ws1; exec firefox-developer-edition'
 
 # Color palette used for the terminal ( ~/.Xresources file )
