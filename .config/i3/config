@@ -172,6 +172,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws8; workspace $ws9
 
 # Open applications on specific workspaces
+assign [class="Chromium"] $ws1
+assign [class="firefox"] $ws1
+assign [class="firefox-developer-edition"] $ws1
 assign [class="code"] $ws2
 assign [class="Keybase"] $ws3
 assign [class="Slack"] $ws3
@@ -284,7 +287,8 @@ exec --no-startup-id keybase-gui
 exec --no-startup-id slack
 exec --no-startup-id discord
 exec --no-startup-id code
-exec --no-startup-id i3-msg 'workspace $ws1; exec firefox-developer-edition'
+exec --no-startup-id firefox-developer-edition
+exec --no-startup-id i3-msg 'workspace $ws1'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
