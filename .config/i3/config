@@ -175,7 +175,7 @@ bindsym $mod+Shift+9 move container to workspace $ws8; workspace $ws9
 assign [class="code"] $ws2
 assign [class="Keybase"] $ws3
 assign [class="Slack"] $ws3
-assign [class="Discord"] $ws3
+assign [class="discord"] $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
