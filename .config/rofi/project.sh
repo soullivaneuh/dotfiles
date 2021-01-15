@@ -16,23 +16,11 @@ if [[ -z "${selection}" ]]; then
 fi
 PROJECT_PATH=${HOME}/p/${selection}
 
-set +e
-wexists=$(i3-msg -t get_workspaces | jq --raw-output '.[].name' | grep ${selection})
-set -e
-i3-msg workspace ${selection}
-if [[ ! -z "${wexists}" ]]; then
-  exit 0
-fi
-
 if [[ ! -d "${PROJECT_PATH}" ]]; then
   termite --exec="ghq get -p ${selection}"
 fi
 
 # Visual code launch
 code ${PROJECT_PATH}
-sleep 0.5
-
-# Frifox session launch
-firefox-developer-edition --new-window http://${selection} &
 
 exit 0
