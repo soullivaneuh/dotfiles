@@ -22,6 +22,5 @@ fi
 
 # Visual code launch
 code ${PROJECT_PATH}
-i3-msg 'workspace 2: '
 
 exit 0
