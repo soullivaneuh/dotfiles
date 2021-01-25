@@ -36,6 +36,7 @@ yay --sync --needed --noconfirm \
   bootiso \
   chromium \
   code \
+  code-marketplace \
   colordiff \
   composer \
   cowsay \
