@@ -1,7 +1,7 @@
 #!/bin/sh
 # Global configuration and init
 
-export PATH="${HOME}/bin:${HOME}/go/bin:${PATH}"
+export PATH="${HOME}/bin:${HOME}/go/bin:${HOME}/.config/composer/vendor/bin:${PATH}"
 
 export TERMINAL="termite"
 export EDITOR="vi"
