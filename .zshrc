@@ -27,12 +27,12 @@ if ! zplug check --verbose; then
   zplug install
 fi
 
-source ~/.alias
-
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
 
 zplug load ${LOAD_FLAGS}
+
+source ~/.alias
 
 eval "$(tmuxifier init -)"
