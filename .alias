@@ -10,6 +10,7 @@ alias m="make"
 alias mux="tmuxifier"
 alias p="pwd"
 alias gs="g s"
+alias gb="g brv"
 # https://gitlab.com/nexylan/pretty
 alias pretty='docker run --rm \
   --env IMAGE_TAG \
