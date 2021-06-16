@@ -29,7 +29,6 @@ zplug "plugins/sudo", from:oh-my-zsh
 
 zplug "caarlos0/git-add-remote"
 zplug "paulirish/git-open"
-zplug "wfxr/forgit"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
