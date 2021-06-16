@@ -6,8 +6,6 @@
 [alias]
 	amend = commit --amend
 	f = fetch --all --prune --tags --prune-tags
-	st = status
-	s = status
 	df = diff
 	dfc = diff --cached
 	d = diff

@@ -9,7 +9,7 @@ alias https="http --default-scheme=https"
 alias m="make"
 alias mux="tmuxifier"
 alias p="pwd"
-alias gs="g s"
+alias gs="git status && echo && git brv"
 alias gb="g brv"
 # https://gitlab.com/nexylan/pretty
 alias pretty='docker run --rm \
