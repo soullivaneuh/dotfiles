@@ -22,6 +22,7 @@ zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "plugins/emoji", from:oh-my-zsh
 zplug "plugins/fzf", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/git-extras", from:oh-my-zsh
 zplug "plugins/helm", from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
