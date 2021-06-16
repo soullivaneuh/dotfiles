@@ -3,4 +3,12 @@
 export GPG_TTY=$(tty)
 export RIPGREP_CONFIG_PATH=${HOME}/.ripgreprc
 
-screenfetch -c "4;1,7;22"
+# Shows a global state of the local git repository.
+# Useful for VScode project terminals.
+git rev-parse --show-toplevel > /dev/null 2>&1
+result=$?
+if test $result = 0; then
+  git status
+  echo
+  git brv
+fi
