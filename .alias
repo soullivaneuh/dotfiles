@@ -17,4 +17,4 @@ alias pretty='docker run --rm \
   --volume "${PWD}":"${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
   --workdir ${PWD} \
-  registry.gitlab.com/nexylan/pretty:1.17.2'
+  registry.gitlab.com/nexylan/pretty:1.18.0'
