@@ -38,6 +38,10 @@
 [push]
 	default = simple
 
+[tag]
+	# @see https://stackoverflow.com/a/22634649/1731473
+	sort = v:refname
+
 [credential]
 	helper = cache --timeout=3600
 
