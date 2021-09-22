@@ -11,7 +11,7 @@ alias mux="tmuxifier"
 alias p="pwd"
 alias gs="git status && echo && git brv"
 alias gb="g brv"
-alias gt="git tag"
+alias gt="git tag | head"
 # https://gitlab.com/nexylan/pretty
 alias pretty='docker run --rm \
   --env IMAGE_TAG \
