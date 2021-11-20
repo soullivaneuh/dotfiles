@@ -18,6 +18,8 @@
 /.config/xfce4/terminal/*
 !/.config/xfce4/terminal/terminalrc
 /.docker/config.json
+/.docker/.token_seed
+/.docker/.token_seed.lock
 /.gnupg/*
 !/.gnupg/gpg.conf
 /.SpaceVim.d/.netrwhist
