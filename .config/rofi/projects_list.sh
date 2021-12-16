@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo -n > ${1}
 
 echo "Fetching GitHub projects..."

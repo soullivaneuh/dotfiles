@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -e
 
 plist=/tmp/sullivan/plist
@@ -5,7 +6,7 @@ plist_ghq=/tmp/sullivan/plist-ghq
 plist_dist=/tmp/sullivan/plist-dist
 
 ghq list > ${plist_ghq}
-test -f ${plist_dist} || termite --exec="sh ${HOME}/.config/rofi/projects_list.sh ${plist_dist}"
+test -f ${plist_dist} || termite --exec="bash ${HOME}/.config/rofi/projects_list.sh ${plist_dist}"
 
 cat ${plist_ghq} ${plist_dist} | awk '!x[$0]++' > ${plist}
 
