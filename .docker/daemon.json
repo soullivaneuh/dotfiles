@@ -1,6 +1,6 @@
 {
   "registry-mirrors": [
-    "https://registry-mirror.nexylan.net"
+    "https://mirror.gcr.io"
   ],
   "insecure-registries": [
     "registry.int.nexylan.net"
