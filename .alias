@@ -12,6 +12,7 @@ alias p="pwd"
 alias gs="git status && echo && git brv"
 alias gb="g brv"
 alias gt="git tag | head"
+alias mr="lab mr"
 # https://gitlab.com/nexylan/pretty
 alias pretty='docker run --rm \
   --env IMAGE_TAG \
