@@ -68,6 +68,7 @@ yay --sync --needed --noconfirm \
   jq \
   keybase-gui \
   make \
+  net-tools \
   nodejs \
   noto-fonts \
   noto-fonts-cjk \
