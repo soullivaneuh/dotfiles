@@ -74,6 +74,7 @@ yay --sync --needed --noconfirm \
   noto-fonts-cjk \
   noto-fonts-extra \
   numlockx \
+  nvm \
   otf-fira-code \
   otf-font-awesome \
   papirus-icon-theme \
