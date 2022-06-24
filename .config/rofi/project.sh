@@ -21,7 +21,16 @@ if [[ ! -d "${PROJECT_PATH}" ]]; then
   termite --exec="ghq get -p ${selection}"
 fi
 
+cd "${PROJECT_PATH}"
+
+if [[ $selection == github.com/* ]] || [[ $selection == git.nexylan.net/* ]]; then
+  git config remote.origin.fetch '+refs/pull/*:refs/remotes/origin/pull/*'
+fi
+if [[ $selection == gitlab.com/* ]] || [[ $selection == git.nexylan.net/* ]]; then
+  git config remote.origin.fetch '+refs/merge-requests/*:refs/remotes/origin/merge-requests/*'
+fi
+
 # Visual code launch
-code "${PROJECT_PATH}"
+code .
 
 exit 0
