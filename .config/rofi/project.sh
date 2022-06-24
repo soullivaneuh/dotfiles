@@ -22,6 +22,6 @@ if [[ ! -d "${PROJECT_PATH}" ]]; then
 fi
 
 # Visual code launch
-code ${PROJECT_PATH}
+code "${PROJECT_PATH}"
 
 exit 0
