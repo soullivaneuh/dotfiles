@@ -24,6 +24,7 @@ zplug "plugins/git", from:oh-my-zsh, if:"which git"
 zplug "plugins/git-extras", from:oh-my-zsh, if:"which git"
 zplug "plugins/helm", from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
+zplug "plugins/kubectl", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 
 zplug "caarlos0/git-add-remote", if:"which git"
