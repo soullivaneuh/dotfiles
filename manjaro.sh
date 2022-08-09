@@ -67,6 +67,8 @@ yay --sync --needed --noconfirm \
   jdk-openjdk \
   jq \
   keybase-gui \
+  kubectl \
+  kubectx \
   make \
   net-tools \
   nodejs \
