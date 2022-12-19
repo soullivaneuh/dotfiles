@@ -50,6 +50,7 @@ yay --sync --needed --noconfirm \
   firefox \
   firefox-developer-edition \
   fzf \
+  fx \
   ghq-bin \
   gnupg \
   git-extras \
