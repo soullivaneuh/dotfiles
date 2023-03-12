@@ -19,6 +19,12 @@ export LESS_TERMCAP_me=$'\e[m'
 export LESS_TERMCAP_ue=$'\e[m'
 export LESS_TERMCAP_se=$'\e[m'
 
+# NPM settings
+# @see https://docs.npmjs.com/cli/using-npm/config
+export npm_config_prefer_offline="true"
+export npm_config_audit="false"
+export npm_config_fund="false"
+
 if [[ -f ~/.profile.local ]]; then
   source ~/.profile.local
 fi
