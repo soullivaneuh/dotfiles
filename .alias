@@ -13,6 +13,7 @@ alias gs="git status && echo && git brv"
 alias gb="g brv"
 alias gt="git tag | head"
 alias mr="lab mr"
+alias my_ip="ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}'"
 # https://gitlab.com/nexylan/pretty
 alias pretty='docker run --rm \
   --env IMAGE_TAG \
