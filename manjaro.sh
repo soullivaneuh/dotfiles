@@ -148,6 +148,8 @@ sudo ln --force --symbolic /run/user/$(id -u)/keybase/kbfs /keybase || true
 
 curl -sLf https://spacevim.org/install.sh | bash
 
+curl -sSL https://get.rvm.io | bash
+
 mkdir --parent --mode=700 "${HOME}/.ssh"
 
 DEPLOY="private/soullivaneuh/deploy"
