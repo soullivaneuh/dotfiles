@@ -35,8 +35,6 @@ yay --sync --needed --noconfirm \
   bind-tools \
   bootiso \
   chromium \
-  code \
-  code-marketplace \
   colordiff \
   composer \
   cowsay \
@@ -99,6 +97,7 @@ yay --sync --needed --noconfirm \
   ttf-hack \
   ttf-joypixels \
   vi-vim-symlink \
+  visual-studio-code-bin \
   wget \
   xfce4-screenshooter \
   xfce4-terminal \
@@ -172,9 +171,6 @@ sudo systemctl enable systemd-timesyncd.service
 
 # Some system try to call chrom with google-chrome bin
 sudo ln --symbolic /usr/bin/google-chrome-stable /usr/bin/google-chrome
-
-# Visual Studio Code base setup
-code --install-extension Shan.code-settings-sync
 
 xdg-settings set default-web-browser firefox-developer-edition.desktop
 
