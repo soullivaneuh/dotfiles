@@ -17,6 +17,7 @@
 !/.config/xfce4/terminal
 /.config/xfce4/terminal/*
 !/.config/xfce4/terminal/terminalrc
+/.docker/buildx/
 /.docker/config.json
 /.docker/.buildNodeID
 /.docker/.token_seed
