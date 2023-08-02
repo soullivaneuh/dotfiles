@@ -42,7 +42,6 @@ yay --sync --needed --noconfirm \
   dep \
   discord \
   docker \
-  docker-compose \
   expect \
   extra/bind-tools \
   firefox \
