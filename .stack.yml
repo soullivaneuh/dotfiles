@@ -21,19 +21,17 @@ services:
     volumes:
       - portainer:/data
       - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - "9000:9000"
     environment:
       DOCKER_CLIENT_TIMEOUT: 60
     restart: always
+    labels:
+      - traefik.http.services.portainer-desktop.loadbalancer.server.port=9000
 
   home:
     build: .services/home
 
   whoami:
     image: containous/whoami
-    labels:
-      - "traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)"
 
 volumes:
   portainer: ~
