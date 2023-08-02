@@ -6,7 +6,7 @@ plist_ghq=/tmp/sullivan/plist-ghq
 plist_dist=/tmp/sullivan/plist-dist
 
 ghq list > ${plist_ghq}
-test -f ${plist_dist} || termite --exec="bash ${HOME}/.config/rofi/projects_list.sh ${plist_dist}"
+test -f ${plist_dist} || alacritty --title "Projects fetching" --command bash ${HOME}/.config/rofi/projects_list.sh ${plist_dist}
 
 cat ${plist_ghq} ${plist_dist} | awk '!x[$0]++' > ${plist}
 
@@ -18,7 +18,7 @@ fi
 PROJECT_PATH=${HOME}/p/${selection}
 
 if [[ ! -d "${PROJECT_PATH}" ]]; then
-  termite --exec="ghq get -p ${selection}"
+  alacritty --title "Cloning of ${PROJECT_PATH}" --command="ghq get -p ${selection}"
 fi
 
 # Visual code launch

@@ -1,9 +1,9 @@
 #!/bin/sh
 # Global configuration and init
 
-export PATH="${HOME}/bin:${HOME}/go/bin:${HOME}/.config/composer/vendor/bin:${PATH}"
+export PATH="${HOME}/bin:/usr/local/go/bin:${HOME}/.config/composer/vendor/bin:${PATH}"
 
-export TERMINAL="termite"
+export TERMINAL="alacritty"
 export EDITOR="vi"
 export VISUAL="view"
 export FILE="ranger"

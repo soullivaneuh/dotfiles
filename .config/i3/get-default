@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-set -e
-
-# MUST BE EXECUTED ON THE I3 CONFIG FOLDER
-
-wget --output-document config https://gitlab.manjaro.org/profiles-and-settings/desktop-settings/raw/master/community/i3/skel/.i3/config

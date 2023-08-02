@@ -6,12 +6,10 @@ zplug "~/.zsh", from:local, use:"*_*.zsh", defer:3
 
 zplug "b4b4r07/emoji-cli"
 zplug "jimeh/tmuxifier", as:command, use:"bin/*"
-zplug "junegunn/fzf", use:"shell/*.zsh", defer:2
+zplug "junegunn/fzf", at:0.29.0, use:"shell/*.zsh", defer:2
 zplug "kubernetes/kompose", from:gh-r, as:command
 zplug "motemen/ghq", use:"zsh"
 zplug "mrowa44/emojify", as:command
-zplug "scaleway/scaleway-cli", as:command, from:gh-r, rename-to:scw
-zplug "scaleway/docker-machine-driver-scaleway", as:command, from:gh-r
 
 zplug "plugins/capistrano", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
