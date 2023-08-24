@@ -101,10 +101,6 @@ curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
 sudo apt-get install ./keybase_amd64.deb
 rm -f keybase_amd64.deb
 
-# Replace default tderminal
-# @see https://stackoverflow.com/a/16808639
-sudo update-alternatives --set x-terminal-emulator $(which xfce4-terminal).wrapper
-
 # Docker
 # @see https://docs.docker.com/engine/install/ubuntu/
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
@@ -177,5 +173,9 @@ sudo chsh -s /bin/zsh $(whoami)
 sudo systemctl enable docker.service
 # NTP service for datetime sync.
 sudo systemctl enable systemd-timesyncd.service
+
+# Replace default tderminal
+# @see https://stackoverflow.com/a/16808639
+sudo update-alternatives --set x-terminal-emulator $(which xfce4-terminal).wrapper
 
 echo "Please reboot."
