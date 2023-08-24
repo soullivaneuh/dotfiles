@@ -11,6 +11,7 @@ sudo apt-get install --yes \
   composer \
   cowsay \
   curl \
+  dconf-editor \
   expect \
   fonts-firacode \
   fonts-font-awesome \
