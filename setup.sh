@@ -99,7 +99,6 @@ curl -s https://raw.githubusercontent.com/zaquestion/lab/master/install.sh | sud
 # Keybase
 curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
 sudo apt-get install ./keybase_amd64.deb
-run_keybase
 rm -f keybase_amd64.deb
 
 # Replace default tderminal
