@@ -95,7 +95,15 @@ sudo cp ./ghq_linux_amd64/ghq /usr/local/bin
 rm -rf ghq_linux_amd64 ghq.zip
 
 # LAB
-curl -s https://raw.githubusercontent.com/zaquestion/lab/master/install.sh | sudo bash
+# @see https://raw.githubusercontent.com/zaquestion/lab/master/install.sh
+# Simplified with locked version
+# @see https://github.com/zaquestion/lab/issues/843
+latest="0.24.0"
+tempFolder="/tmp/lab_v${latest}"
+mkdir -p "${tempFolder}" 2> /dev/null
+curl -sL "https://github.com/zaquestion/lab/releases/download/v${latest}/lab_${latest}_linux_amd64.tar.gz" | tar -C "${tempFolder}" -xzf -
+sudo install -m755 "${tempFolder}/lab" /usr/bin/lab
+rm -rf "${tempFolder}"
 
 # Keybase
 curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
