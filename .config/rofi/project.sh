@@ -18,7 +18,7 @@ fi
 PROJECT_PATH=${HOME}/p/${selection}
 
 if [[ ! -d "${PROJECT_PATH}" ]]; then
-  alacritty --title "Cloning of ${PROJECT_PATH}" --command="ghq get -p ${selection}"
+  alacritty --title "Cloning of ${PROJECT_PATH}" --command ghq get -p ${selection}
 fi
 
 # Visual code launch
