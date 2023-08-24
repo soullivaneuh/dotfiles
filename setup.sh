@@ -80,8 +80,6 @@ https://regolith-desktop.org/release-ubuntu-jammy-amd64 jammy main" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 sudo apt-get update
 sudo apt-get install regolith-desktop regolith-look-gruvbox
-regolith-look set gruvbox
-regolith-look refresh
 
 # GoLang
 wget -O go.tar.gz https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
