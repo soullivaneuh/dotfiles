@@ -49,6 +49,7 @@ sudo apt-get install --yes \
   vim \
   wget \
   xfce4-screenshooter \
+  xfce4-terminal \
   zsh
 
 # Alacritty
