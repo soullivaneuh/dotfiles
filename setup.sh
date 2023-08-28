@@ -55,14 +55,14 @@ sudo apt-get install --yes \
 # Alacritty
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt-get update
-sudo apt-get install alacritty
+sudo apt-get install --yes alacritty
 
 # Google Chrome
 sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 wget -O- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo tee /etc/apt/trusted.gpg.d/linux_signing_key.pub
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
 sudo apt-get update
-sudo apt-get install google-chrome-stable
+sudo apt-get install --yes google-chrome-stable
 
 # Snap only packages.
 # And yes, we have to do this shitty commands chaining because
@@ -80,7 +80,7 @@ echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg
 https://regolith-desktop.org/release-ubuntu-jammy-amd64 jammy main" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 sudo apt-get update
-sudo apt-get install regolith-desktop regolith-look-gruvbox
+sudo apt-get install --yes regolith-desktop regolith-look-gruvbox
 
 # GoLang
 wget -O go.tar.gz https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
@@ -107,7 +107,7 @@ rm -rf "${tempFolder}"
 
 # Keybase
 curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
-sudo apt-get install ./keybase_amd64.deb
+sudo apt-get install --yes ./keybase_amd64.deb
 rm -f keybase_amd64.deb
 
 # Docker
@@ -121,7 +121,7 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmo
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+sudo apt-get install --yes apt-transport-https ca-certificates curl software-properties-common
 sudo apt install docker-ce
 
 sudo usermod --append --groups docker "$(whoami)"
