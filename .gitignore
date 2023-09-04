@@ -7,9 +7,9 @@
 /.config/oomox/*
 !/.config/oomox/colors/
 !/.config/polybar/
-!/.config/regolith2/
-/.config/regolith2/*
-!/.config/regolith2/i3
+!/.config/regolith3/
+/.config/regolith3/*
+!/.config/regolith3/i3
 !/.config/rofi/
 !/.config/terminator/
 !/.config/termite/
