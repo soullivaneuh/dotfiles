@@ -78,7 +78,7 @@ snap list | awk '{print $1}' | grep -q "^code$" || snap install --classic code
 wget -qO - https://regolith-desktop.org/regolith.key | \
 gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
 echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-https://regolith-desktop.org/release-ubuntu-${VERSION_CODENAME}-amd64 ${VERSION_CODENAME} main" | \
+https://regolith-desktop.org/release-3_0-ubuntu-${VERSION_CODENAME}-amd64 ${VERSION_CODENAME} main" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 sudo apt-get update
 sudo apt-get install --yes regolith-desktop regolith-look-gruvbox
