@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 set -e
+. /etc/os-release
 
 sudo apt-get update
 sudo apt-get dist-upgrade --yes
@@ -77,7 +78,7 @@ snap list | awk '{print $1}' | grep -q "^code$" || snap install --classic code
 wget -qO - https://regolith-desktop.org/regolith.key | \
 gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
 echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-https://regolith-desktop.org/release-ubuntu-jammy-amd64 jammy main" | \
+https://regolith-desktop.org/release-ubuntu-${VERSION_CODENAME}-amd64 ${VERSION_CODENAME} main" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 sudo apt-get update
 sudo apt-get install --yes regolith-desktop regolith-look-gruvbox
@@ -114,7 +115,7 @@ rm -f keybase_amd64.deb
 # @see https://docs.docker.com/engine/install/ubuntu/
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu ${VERSION_CODENAME} stable"
 # @see
 sudo mkdir -p /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor --yes -o /etc/apt/keyrings/docker.gpg
