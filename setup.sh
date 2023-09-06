@@ -81,7 +81,10 @@ echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg
 https://regolith-desktop.org/release-3_0-ubuntu-${VERSION_CODENAME}-amd64 ${VERSION_CODENAME} main" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 sudo apt-get update
-sudo apt-get install --yes regolith-desktop regolith-session-flashback regolith-look-gruvbox
+sudo apt-get install --yes \
+  regolith-desktop \
+  regolith-session-flashback \
+  regolith-look-gruvbox
 
 # GoLang
 wget -O go.tar.gz https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
