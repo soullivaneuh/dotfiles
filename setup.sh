@@ -84,7 +84,9 @@ sudo apt-get update
 sudo apt-get install --yes \
   regolith-desktop \
   regolith-session-flashback \
-  regolith-look-gruvbox
+  regolith-look-gruvbox \
+  i3xrocks-keyboard-layout \
+  i3xrocks-time
 
 # GoLang
 wget -O go.tar.gz https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
