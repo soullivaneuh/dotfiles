@@ -2,7 +2,6 @@
 /.vscode/*
 !/.vscode/settings.json
 *.phar
-/coverage
 
 # TMP files #
 #############
