@@ -44,7 +44,6 @@ sudo apt-get install --yes \
   ruby-bundler \
   screenfetch \
   ssh-audit \
-  steam \
   subversion \
   tmux \
   vim \
