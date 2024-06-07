@@ -8,6 +8,7 @@ sudo apt-get install --yes \
   asciinema \
   atool \
   bfs \
+  btop \
   colordiff \
   composer \
   cowsay \
