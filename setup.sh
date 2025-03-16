@@ -8,6 +8,7 @@ sudo apt dist-upgrade --yes
 sudo apt install --yes \
   php \
   composer \
+  golang-go \
   ruby \
   ruby-bundler
 # Utilities
@@ -88,12 +89,6 @@ sudo apt install --yes \
   regolith-look-gruvbox \
   i3xrocks-keyboard-layout \
   i3xrocks-time
-
-# GoLang
-wget -O go.tar.gz https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go.tar.gz
-rm -f go.tar.gz
-export PATH=$PATH:/usr/local/go/bin
 
 # GHQ
 wget -O ghq.zip https://github.com/x-motemen/ghq/releases/download/v1.4.2/ghq_linux_amd64.zip
