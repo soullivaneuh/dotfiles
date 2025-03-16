@@ -33,8 +33,6 @@ sudo apt install --yes \
   jq \
   make \
   net-tools \
-  nodejs \
-  npm \
   numlockx \
   papirus-icon-theme \
   php \
