@@ -4,13 +4,19 @@ set -e
 
 sudo apt update
 sudo apt dist-upgrade --yes
+# Programation languages
+sudo apt install --yes \
+  php \
+  composer \
+  ruby \
+  ruby-bundler
+# Utilities
 sudo apt install --yes \
   asciinema \
   atool \
   bfs \
   btop \
   colordiff \
-  composer \
   cowsay \
   curl \
   dconf-editor \
@@ -35,12 +41,9 @@ sudo apt install --yes \
   net-tools \
   numlockx \
   papirus-icon-theme \
-  php \
   polybar \
   ripgrep \
   rofi \
-  ruby \
-  ruby-bundler \
   screenfetch \
   ssh-audit \
   subversion \
