@@ -2,9 +2,9 @@
 set -e
 . /etc/os-release
 
-sudo apt-get update
-sudo apt-get dist-upgrade --yes
-sudo apt-get install --yes \
+sudo apt update
+sudo apt dist-upgrade --yes
+sudo apt install --yes \
   asciinema \
   atool \
   bfs \
@@ -55,15 +55,15 @@ sudo apt-get install --yes \
 
 # Alacritty
 sudo add-apt-repository ppa:aslatter/ppa -y
-sudo apt-get update
-sudo apt-get install --yes alacritty
+sudo apt update
+sudo apt install --yes alacritty
 
 # Google Chrome
 sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 wget -O- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo tee /etc/apt/trusted.gpg.d/linux_signing_key.pub
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
-sudo apt-get update
-sudo apt-get install --yes google-chrome-stable
+sudo apt update
+sudo apt install --yes google-chrome-stable
 
 # Snap only packages.
 # And yes, we have to do this shitty commands chaining because
@@ -80,8 +80,8 @@ gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev
 echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
 https://regolith-desktop.org/release-3_1-ubuntu-${VERSION_CODENAME}-amd64 ${VERSION_CODENAME} main" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
-sudo apt-get update
-sudo apt-get install --yes \
+sudo apt update
+sudo apt install --yes \
   regolith-desktop \
   regolith-session-flashback \
   regolith-look-gruvbox \
@@ -113,12 +113,12 @@ rm -rf "${tempFolder}"
 
 # Keybase
 curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
-sudo apt-get install --yes ./keybase_amd64.deb
+sudo apt install --yes ./keybase_amd64.deb
 rm -f keybase_amd64.deb
 
 # Docker
 # @see https://docs.docker.com/engine/install/ubuntu/
-for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt remove $pkg; done
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu ${VERSION_CODENAME} stable"
 # @see
@@ -126,8 +126,8 @@ sudo mkdir -p /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor --yes -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
-sudo apt-get update
-sudo apt-get install --yes apt-transport-https ca-certificates curl software-properties-common
+sudo apt update
+sudo apt install --yes apt-transport-https ca-certificates curl software-properties-common
 sudo apt install docker-ce
 
 sudo usermod --append --groups docker "$(whoami)"
@@ -148,9 +148,9 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/devel_kubic_libcontainers_unstable.gpg]\
     https://download.opensuse.org/repositories/devel:kubic:libcontainers:unstable/Debian_Unstable/ /" \
   | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:unstable.list > /dev/null
-sudo apt-get update
-sudo apt-get -y upgrade
-sudo apt-get -y install podman
+sudo apt update
+sudo apt -y upgrade
+sudo apt -y install podman
 # Enable rootls podman socket
 systemctl --user enable --now podman.socket
 
