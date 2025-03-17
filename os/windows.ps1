@@ -1,5 +1,5 @@
 Set-StrictMode -Version latest
-# TODO: Exit on fail (set -e like)
+# TODO: Exit on failure (set -e like)
 # => https://stackoverflow.com/q/9948517
 # If not possible, consider using bash script (call winget.exe) with previous manual WSL installation instead?
 
