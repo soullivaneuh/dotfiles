@@ -173,9 +173,9 @@ if [ -d ${CONFIG_PATH}.back ]; then
 fi
 keybase login soullivaneuh || true
 if [ -z $(gpg --fingerprint --with-colons | grep -o 04460CD228DF9E0D42F07643992EB6FAFD4E6361) ]; then
- keybase pgp export | gpg --import
- keybase pgp export --secret | gpg --import
- ./gpg-trust.exp FD4E6361
+  keybase pgp export | gpg --import
+  keybase pgp export --secret | gpg --import
+  ./gpg-trust.exp FD4E6361
 fi
 cd -
 sudo ln --force --symbolic /run/user/$(id -u)/keybase/kbfs /keybase || true
