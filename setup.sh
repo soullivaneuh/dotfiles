@@ -6,7 +6,7 @@ sudo apt update
 sudo apt dist-upgrade --yes
 # Programation languages
 sudo apt install --yes \
-  php \
+  php-cli \
   composer \
   golang-go \
   ruby \
