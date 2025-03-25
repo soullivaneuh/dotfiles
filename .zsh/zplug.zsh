@@ -13,7 +13,6 @@ zplug "mrowa44/emojify", as:command
 
 zplug "plugins/capistrano", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
-zplug "plugins/cp", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "plugins/emoji", from:oh-my-zsh
