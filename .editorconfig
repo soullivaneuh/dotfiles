@@ -1,12 +1,35 @@
+# https://gitlab.com/ss-open/editorconfig
 root = true
 
 [*]
 end_of_line = lf
-indent_style = space
-indent_size = 2
 charset = utf-8
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[{.gitconfig, Makefile}]
+[*.{cjs,js,jsx,ts,tsx,json,css,scss,less,html,tf,yml,yaml}]
+indent_style = space
+indent_size = 2
+
+[*.{twig,php,ps1}]
+indent_style = space
+indent_size = 4
+
+[*.{go,sh,bash,zsh}]
 indent_style = tab
+
+[composer.{json,lock}]
+indent_style = space
+indent_size = 4
+
+[{.gitconfig,Caddyfile,Makefile}]
+indent_style = tab
+
+# Generated files
+[{.checkov.baseline,bun.lockb}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
