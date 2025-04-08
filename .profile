@@ -32,7 +32,9 @@ fi
 eval "$(hub alias -s)"
 
 # Default numlock activation.
-numlockx on
+if [[ -x "$(command -v numlockx)" ]]; then
+  numlockx on
+fi
 
 if [[ -f ~/.screenlayout/default.sh ]]; then
   sh ~/.screenlayout/default.sh
